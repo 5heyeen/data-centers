@@ -65,6 +65,18 @@ When the user says:
 - Low-confidence assessments must be flagged.
 - The final brief should be readable in under 15 minutes.
 
+## Notion Sync Rules
+
+When any of the following files are modified, **always sync the changes back to Notion**:
+
+| Local File | Notion Target |
+|------------|---------------|
+| `projects/dc-gtm/customer-personas/dc-customer-personas.md` | [DC Customer Personas & Value Props](https://www.notion.so/32d64f448283806d8b8cf32572c4be43) |
+
+To sync: after editing the local file, use the Notion MCP tools (`mcp__*__notion-update-page` or `mcp__*__notion-create-pages`) to push the updated content to the corresponding Notion page/database.
+
+---
+
 ## Practical Notes
 
 - **finn.no** may not allow direct page fetches — use WebSearch to get job ad summaries from search snippets.
