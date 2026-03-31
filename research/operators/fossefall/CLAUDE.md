@@ -5,9 +5,9 @@ This folder contains research and meeting preparation for Fossefall.
 ## Setup
 
 1. Read `operator.md` for known context about Fossefall.
-2. Read the root `CLAUDE.md` (two levels up: `../../CLAUDE.md`) for the full workflow and available commands.
-3. Reference files are at `../../metier/services.md` and `../../metier/pain-point-mapping.md`.
-4. Prompt templates are at `../../templates/prompts/`.
+2. Read the root `CLAUDE.md` (three levels up: `../../../CLAUDE.md`) for the full workflow and available skills.
+3. Reference files are at `../../../metier/services.md` and `../../../metier/pain-point-mapping.md`.
+4. Prompt templates are at `../../../templates/prompts/`.
 
 ## Operator Context
 

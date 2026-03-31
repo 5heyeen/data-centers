@@ -5,8 +5,8 @@ This folder contains research and meeting preparation for Kitebrook.
 ## Setup
 
 1. Read `operator.md` for known context.
-2. Read `../../CLAUDE.md` for the full workflow.
-3. Reference files at `../../metier/` and prompt templates at `../../templates/prompts/`.
+2. Read `../../../CLAUDE.md` for the full workflow.
+3. Reference files at `../../../metier/` and prompt templates at `../../../templates/prompts/`.
 
 ## Commands
 
