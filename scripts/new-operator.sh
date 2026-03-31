@@ -7,7 +7,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(dirname "$SCRIPT_DIR")"
-TEMPLATE_DIR="$REPO_ROOT/operators/_template"
+TEMPLATE_DIR="$REPO_ROOT/research/operators/_template"
 
 if [ $# -eq 0 ]; then
     echo "Usage: $0 <operator-name>"
@@ -16,7 +16,7 @@ if [ $# -eq 0 ]; then
 fi
 
 OPERATOR_NAME="$1"
-OPERATOR_DIR="$REPO_ROOT/operators/$OPERATOR_NAME"
+OPERATOR_DIR="$REPO_ROOT/research/operators/$OPERATOR_NAME"
 
 if [ -d "$OPERATOR_DIR" ]; then
     echo "Error: Operator folder already exists: $OPERATOR_DIR"

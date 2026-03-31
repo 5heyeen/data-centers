@@ -15,11 +15,11 @@ Build a Claude Code agent (CLAUDE.md-based) that researches a data center operat
 
 4. **Build the pain-point-to-service mapping logic** — Create `metier/pain-point-mapping.md` with a decision-tree or matrix: "if operator lacks X capability, suggest Y service", "if PE-backed, emphasize execution speed, suggest Z". Cover at least the Fossefall pattern (finance background, no execution capability) and Skygard pattern (high-security, contractor clearance needs). Done when 5-6 common DC operator pain points are mapped to specific Metier services.
 
-5. **Define the operator input format** — Create `operators/_template/operator.md` specifying what the user provides per operator: company name, website URL, known context/notes, market segment hint, meeting date. Done when the minimal input needed to start research is clear.
+5. **Define the operator input format** — Create `research/operators/_template/operator.md` specifying what the user provides per operator: company name, website URL, known context/notes, market segment hint, meeting date. Done when the minimal input needed to start research is clear.
 
 6. **Build the research pipeline in CLAUDE.md** — Write the master `CLAUDE.md` with step-by-step instructions for the agent: (a) read operator config, (b) search company website, (c) search finn.no for job ads, (d) search LinkedIn/news for org structure and announcements, (e) identify strategic positioning, (f) find comparable operators, (g) synthesize pain points, (h) map to Metier services, (i) generate brief. Done when the CLAUDE.md can be followed as a runnable workflow by Claude.
 
-7. **Create the first operator config: Fossefall** — Populate `operators/fossefall/operator.md` with known context (500MW AI target, Rollag site, finance background, no execution capability, VP Construction hired, need engineering manager). Done when the config captures all known seed information.
+7. **Create the first operator config: Fossefall** — Populate `research/operators/fossefall/operator.md` with known context (500MW AI target, Rollag site, finance background, no execution capability, VP Construction hired, need engineering manager). Done when the config captures all known seed information.
 
 8. **Create placeholder operator configs** — Set up stub folders for Skygard (high-security, Hafslund/Telenor/HitecVision), Kitebrook, and Bifrost Edge with minimal known context. Done when each has a folder with a skeleton `operator.md`.
 

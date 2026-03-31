@@ -12,9 +12,20 @@ dc-gtm/
 ├── README.md                          # This file
 ├── synthesis.md                       # Cross-stream research synthesis
 │
-├── commands/                          # Reusable Claude Code skills (slash commands)
+├── skills/                            # Reusable Claude Code skills (slash commands)
 ├── agents/                            # Agent definitions and breakdowns
 ├── specs/                             # Project specifications and design documents
+├── memories/                          # Persistent context and learnings
+│
+├── research/                          # All research outputs
+│   ├── operators/                     # Per-operator intelligence folders
+│   │   ├── _template/                 # Template for new operators
+│   │   ├── fossefall/                 # Fossefall (500 MW AI DC startup)
+│   │   ├── skygard/                   # Skygard (Telenor/Hafslund/HitecVision JV)
+│   │   ├── kitebrook/                 # Kitebrook
+│   │   └── bifrost-edge/             # Bifrost Edge
+│   ├── investors/                     # Investor research and analysis
+│   └── tech-trends/                   # Technology trends reshaping DC design & construction
 │
 ├── tasks/                             # Research workspace (Phase 5 prompt chains + outputs)
 │   ├── 01-operator-lifecycle/         # DC operator & project lifecycle phases
@@ -27,13 +38,6 @@ dc-gtm/
 │   ├── 08-service-design/             # Service catalog and packaging
 │   └── 09-target-operators/           # Investment flows, TAM/SAM, revenue roadmap
 │
-├── operators/                         # Per-operator intelligence folders
-│   ├── _template/                     # Template for new operators
-│   ├── fossefall/                     # Fossefall (500 MW AI DC startup)
-│   ├── skygard/                       # Skygard (Telenor/Hafslund/HitecVision JV)
-│   ├── kitebrook/                     # Kitebrook
-│   └── bifrost-edge/                  # Bifrost Edge
-│
 ├── metier/                            # Metier-specific strategy documents
 ├── templates/                         # Templates for research and meeting briefs
 └── scripts/                           # Utility scripts
@@ -43,7 +47,7 @@ dc-gtm/
 
 ## Folder Guide — What Goes Where
 
-### `commands/` — Reusable Claude Code Skills
+### `skills/` — Reusable Claude Code Skills
 
 Slash commands that can be invoked in any Claude Code session. Copy to `~/.claude/commands/` for global use, or to `.claude/commands/` in any project for project-scoped use.
 
@@ -108,12 +112,12 @@ tasks/<NN>-<task-name>/
 
 Tasks 01, 02, 04, 05, 06, 08 have prompt chains designed in the Phase 1-4 Socratic framework (see `01-breakdown.md`) but haven't been executed in this repo yet.
 
-### `operators/` — Per-Operator Intelligence
+### `research/operators/` — Per-Operator Intelligence
 
 One folder per target DC operator. Used by the meeting-prep agent and for ongoing operator tracking.
 
 ```
-operators/<operator-name>/
+research/operators/<operator-name>/
 ├── CLAUDE.md              # Agent instructions specific to this operator
 ├── operator.md            # Input: what we know before research
 ├── profile.md             # Output: full researched profile
@@ -128,6 +132,18 @@ operators/<operator-name>/
 ```
 
 **To add a new operator:** Run `./scripts/new-operator.sh <operator-name>`, then edit `operator.md` with what you know.
+
+### `research/investors/` — Investor Research
+
+Research and analysis of investors in the Norwegian data center market. Includes investor checklists, execution capability assessments, and value propositions.
+
+### `research/tech-trends/` — Technology Trends
+
+Technology trends reshaping data center design and construction. Includes trend analysis, capability gap assessment, and timing matrix.
+
+### `memories/` — Persistent Context
+
+Persistent learnings, context, and notes that carry across sessions.
 
 ### `metier/` — Metier Strategy Documents
 
@@ -152,7 +168,7 @@ Reusable templates for research outputs and meeting preparation.
 
 | Script | Purpose |
 |--------|---------|
-| `new-operator.sh` | Scaffolds a new operator folder from `operators/_template/` |
+| `new-operator.sh` | Scaffolds a new operator folder from `research/operators/_template/` |
 
 ---
 
@@ -172,7 +188,7 @@ Reusable templates for research outputs and meeting preparation.
 
 ### Run the meeting-prep agent for an operator
 ```bash
-cd operators/fossefall
+cd research/operators/fossefall
 claude
 # Say: "Run all phases"
 ```
@@ -187,14 +203,14 @@ claude
 ### Add a new operator
 ```bash
 ./scripts/new-operator.sh <name>
-# Edit operators/<name>/operator.md
-cd operators/<name>
+# Edit research/operators/<name>/operator.md
+cd research/operators/<name>
 claude
 # Say: "Run all phases"
 ```
 
 ### Use the skills in any project
-Copy `commands/*.md` to `~/.claude/commands/` — they become available as `/create-prompts`, `/researcher-agent`, etc. in all Claude Code sessions.
+Copy `skills/*.md` to `~/.claude/commands/` — they become available as `/create-prompts`, `/researcher-agent`, etc. in all Claude Code sessions.
 
 ---
 
