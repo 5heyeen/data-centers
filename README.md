@@ -17,15 +17,16 @@ dc-gtm/
 ├── specs/                             # Project specifications and design documents
 ├── memories/                          # Persistent context and learnings
 │
-├── research/                          # All research outputs
-│   ├── operators/                     # Per-operator intelligence folders
-│   │   ├── _template/                 # Template for new operators
-│   │   ├── fossefall/                 # Fossefall (500 MW AI DC startup)
-│   │   ├── skygard/                   # Skygard (Telenor/Hafslund/HitecVision JV)
-│   │   ├── kitebrook/                 # Kitebrook
-│   │   └── bifrost-edge/             # Bifrost Edge
-│   ├── investors/                     # Investor research and analysis
-│   └── tech-trends/                   # Technology trends reshaping DC design & construction
+├── projects/                          # Project-level folders
+│   ├── dc-gtm/                        # The overall DC GTM initiative
+│   │   ├── investors/                 # Investor research and analysis
+│   │   └── tech-trends/              # Technology trends reshaping DC design & construction
+│   └── operators/                     # Per-operator intelligence folders
+│       ├── _template/                 # Template for new operators
+│       ├── fossefall/                 # Fossefall (500 MW AI DC startup)
+│       ├── skygard/                   # Skygard (Telenor/Hafslund/HitecVision JV)
+│       ├── kitebrook/                 # Kitebrook
+│       └── bifrost-edge/             # Bifrost Edge
 │
 ├── tasks/                             # Research workspace (Phase 5 prompt chains + outputs)
 │   ├── 01-operator-lifecycle/         # DC operator & project lifecycle phases
@@ -112,12 +113,12 @@ tasks/<NN>-<task-name>/
 
 Tasks 01, 02, 04, 05, 06, 08 have prompt chains designed in the Phase 1-4 Socratic framework (see `01-breakdown.md`) but haven't been executed in this repo yet.
 
-### `research/operators/` — Per-Operator Intelligence
+### `projects/operators/` — Per-Operator Intelligence
 
 One folder per target DC operator. Used by the meeting-prep agent and for ongoing operator tracking.
 
 ```
-research/operators/<operator-name>/
+projects/operators/<operator-name>/
 ├── CLAUDE.md              # Agent instructions specific to this operator
 ├── operator.md            # Input: what we know before research
 ├── profile.md             # Output: full researched profile
@@ -133,11 +134,11 @@ research/operators/<operator-name>/
 
 **To add a new operator:** Run `./scripts/new-operator.sh <operator-name>`, then edit `operator.md` with what you know.
 
-### `research/investors/` — Investor Research
+### `projects/dc-gtm/investors/` — Investor Research
 
 Research and analysis of investors in the Norwegian data center market. Includes investor checklists, execution capability assessments, and value propositions.
 
-### `research/tech-trends/` — Technology Trends
+### `projects/dc-gtm/tech-trends/` — Technology Trends
 
 Technology trends reshaping data center design and construction. Includes trend analysis, capability gap assessment, and timing matrix.
 
@@ -168,7 +169,7 @@ Reusable templates for research outputs and meeting preparation.
 
 | Script | Purpose |
 |--------|---------|
-| `new-operator.sh` | Scaffolds a new operator folder from `research/operators/_template/` |
+| `new-operator.sh` | Scaffolds a new operator folder from `projects/operators/_template/` |
 
 ---
 
@@ -188,7 +189,7 @@ Reusable templates for research outputs and meeting preparation.
 
 ### Run the meeting-prep agent for an operator
 ```bash
-cd research/operators/fossefall
+cd projects/operators/fossefall
 claude
 # Say: "Run all phases"
 ```
@@ -203,8 +204,8 @@ claude
 ### Add a new operator
 ```bash
 ./scripts/new-operator.sh <name>
-# Edit research/operators/<name>/operator.md
-cd research/operators/<name>
+# Edit projects/operators/<name>/operator.md
+cd projects/operators/<name>
 claude
 # Say: "Run all phases"
 ```
