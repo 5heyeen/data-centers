@@ -1,6 +1,6 @@
 # Operator Profile Template
 
-Copy this file to `research/operators/<operator-name>/operator.md` and fill in the known fields. Fields marked **(required)** must be filled before running the agent. All other fields are optional — the agent will attempt to research them.
+Copy this file to `projects/operators/<operator-name>/operator.md` and fill in the known fields. Fields marked **(required)** must be filled before running the agent. All other fields are optional — the agent will attempt to research them.
 
 ---
 

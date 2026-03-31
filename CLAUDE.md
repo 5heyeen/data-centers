@@ -1,10 +1,10 @@
 # prep-meeting-agent — Data Center Meeting Preparation
 
-This repo supports Metier's go-to-market strategy targeting Norwegian data center operators. Each subfolder under `research/operators/` represents one target operator.
+This repo supports Metier's go-to-market strategy targeting Norwegian data center operators. Each subfolder under `projects/operators/` represents one target operator.
 
 ## Purpose
 
-When run inside an operator folder (`research/operators/<name>/`), this agent researches the operator from public sources and produces a structured meeting brief that maps their pain points to Metier's services.
+When run inside an operator folder (`projects/operators/<name>/`), this agent researches the operator from public sources and produces a structured meeting brief that maps their pain points to Metier's services.
 
 ## Available Tools
 
