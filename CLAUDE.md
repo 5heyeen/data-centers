@@ -1,4 +1,4 @@
-# DC GTM — Meeting Preparation Agent
+# prep-meeting-agent — Data Center Meeting Preparation
 
 This repo supports Metier's go-to-market strategy targeting Norwegian data center operators. Each subfolder under `operators/` represents one target operator.
 

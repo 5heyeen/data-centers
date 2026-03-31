@@ -1,4 +1,4 @@
-# DC GTM — Data Center Go-to-Market
+# prep-meeting-agent
 
 Meeting preparation agent for Metier's data center operator clients. Researches operators from public sources and produces structured meeting briefs mapping their pain points to Metier's services.
 

@@ -1,4 +1,4 @@
-# Breakdown: Meeting Prep Agent for DC Operators
+# Breakdown: prep-meeting-agent
 
 **Date:** 2026-03-31
 
