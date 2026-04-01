@@ -6,7 +6,7 @@ This folder contains research and operator intelligence for Fossefall.
 
 1. Read `operator.md` for known context about Fossefall.
 2. Read the root `CLAUDE.md` (three levels up: `../../../CLAUDE.md`) for the full workflow and available skills.
-3. Reference files are at `../../../metier/services.md` and `../../../metier/pain-point-mapping.md`.
+3. Reference files are at `../../../metier/services.md` and `../../../projects/dc-gtm/dc-services/dc_services_metier_pain_point.md`.
 4. Prompt templates are at `../../../templates/prompts/`.
 
 ## Operator Context

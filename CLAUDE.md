@@ -21,7 +21,7 @@ This agent uses **WebSearch** and **WebFetch** for research. All research is don
 ## Key Reference Files
 
 - `metier/services.md` — Metier's service catalog with DC-specific framing (8 services)
-- `metier/pain-point-mapping.md` — Decision framework mapping pain points to services, including 4 operator archetype patterns and funding-driven pain points
+- `projects/dc-gtm/dc-services/dc_services_metier_pain_point.md` — Decision framework mapping pain points to services, including 4 operator archetype patterns and funding-driven pain points
 - `templates/prompts/01-06` — Detailed instructions for each research phase
 - `templates/meeting-brief.md` — Output template for the final brief (includes Funding & Investor Context section)
 
@@ -42,7 +42,7 @@ Read `templates/prompts/03-news-and-ownership.md` and execute. This is a critica
 Read `templates/prompts/04-competitive-landscape.md` and execute. Saves to `research/04-comparables.md`.
 
 ### Phase 5: Pain Point Mapping (no web research — synthesis only)
-Read `templates/prompts/05-pain-point-mapping.md` and execute. Also read `metier/services.md` and `metier/pain-point-mapping.md`. **Pay special attention to the "Funding-Driven Pain Points" section** in the pain-point mapping — investor pressure, milestone-gated capital, ESG mandates, and reporting burden are often the most urgent pain points for PE-backed and fund-backed operators. Saves to `research/05-pain-points.md`.
+Read `templates/prompts/05-pain-point-mapping.md` and execute. Also read `metier/services.md` and `projects/dc-gtm/dc-services/dc_services_metier_pain_point.md`. **Pay special attention to the "Funding-Driven Pain Points" section** in the pain-point mapping — investor pressure, milestone-gated capital, ESG mandates, and reporting burden are often the most urgent pain points for PE-backed and fund-backed operators. Saves to `research/05-pain-points.md`.
 
 ### Phase 6: Meeting Brief Generation (no web research — synthesis only)
 Read `templates/prompts/06-brief-generation.md` and execute. **Ensure the "Funding & Investor Context" section (Section 3) is fully populated** — this is often the most actionable section for Metier's pitch. Saves to `research/brief.md`.

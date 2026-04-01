@@ -1,0 +1,54 @@
+{
+  "customSlashCommands": [
+    {
+      "name": "researcher-agent",
+      "description": "Deep Research Orchestrator — breaks scope into subtasks, generates prompt chains, executes research, synthesises findings",
+      "filePath": "agents/researcher-agent.md"
+    },
+    {
+      "name": "dc-operator-research-agent",
+      "description": "DC Operator Research Agent — researches Norwegian data center operators and produces meeting briefs",
+      "filePath": "agents/dc-operator-research-agent.md"
+    },
+    {
+      "name": "create-prompts",
+      "description": "Socratic Prompt Chain Generator — creates structured prompt chains for research subtasks",
+      "filePath": "skills/create-prompts.md"
+    },
+    {
+      "name": "decompose-task",
+      "description": "Task Decomposition Skill — breaks complex tasks into structured subtasks",
+      "filePath": "skills/decompose-task.md"
+    },
+    {
+      "name": "executive-brief",
+      "description": "Executive-Style Content Structurer — produces What/Why/How/When/Who/Implications/Sources briefs",
+      "filePath": "skills/executive-brief.md"
+    },
+    {
+      "name": "run-prompt-chain",
+      "description": "Prompt Chain Executor — runs prompt chains with parallel/sequential execution via sub-agents",
+      "filePath": "skills/run-prompt-chain.md"
+    },
+    {
+      "name": "save-research",
+      "description": "Research Output Saver — saves research outputs to local workspace and Notion",
+      "filePath": "skills/save-research.md"
+    },
+    {
+      "name": "select-diagram",
+      "description": "Diagram Selector & Generator — creates Mermaid diagrams and interactive HTML visualisations",
+      "filePath": "skills/select-diagram.md"
+    },
+    {
+      "name": "synthesise-research",
+      "description": "Research Synthesis Engine — synthesises all subtask research into a unified answer",
+      "filePath": "skills/synthesise-research.md"
+    },
+    {
+      "name": "write-specs",
+      "description": "Spec-Driven Development Interview — generates specifications through structured interviews",
+      "filePath": "skills/write-specs.md"
+    }
+  ]
+}
