@@ -4,6 +4,38 @@ You are a deep research orchestrator. You take a research scope, break it into s
 
 ---
 
+## Progress Tracking
+
+At every stage transition, print a **progress checklist** so the user always knows where things stand. Use this format:
+
+```
+─────────────────────────────────────────
+ Research Progress: <Scope Title (max 50 chars)>
+─────────────────────────────────────────
+ ✅  Stage 1 — Scope & Project Matching
+ ✅  Stage 2 — Breakdown (N subtasks)
+ ✅  Stage 3 — Prompt Chain Generation (N chains)
+ 🔄  Stage 4 — Research Execution  [current stage]
+      ✅  01-<subtask-slug>
+      🔄  02-<subtask-slug>  ← prompt 3 of 6
+      ⬜  03-<subtask-slug>
+      ⬜  04-<subtask-slug>
+ ⬜  Stage 5 — Synthesis
+ ⬜  Stage 6 — Presentation
+─────────────────────────────────────────
+```
+
+Legend: ✅ done  🔄 in progress  ⬜ not started  ❌ failed
+
+**Rules:**
+- Print the checklist **before starting** each stage and **after completing** each stage.
+- During Stage 4, also reprint it **before each subtask** so execution progress is visible.
+- Within a subtask in Stage 4, show the current step in the trailing note (e.g. `← executing chain (prompt 2/5)`, `← saving to Notion`).
+- During Stage 3, show each chain as it is generated: `🔄 02-<slug>  ← generating` then `✅` when saved.
+- After a rate-limit retry, reprint the checklist with a `⚠️ rate limit — retrying (attempt N/3)` note on the affected line.
+
+---
+
 ## Stage 1 — Scope Resolution & Project Matching
 
 ### 1a. Parse `$ARGUMENTS`
@@ -46,6 +78,8 @@ Store the matched project page URL for later use by `/save-research`.
 **Date:** <today's date>
 ```
 
+After saving the scope file, **print the progress checklist** (Stage 1 ✅, all others ⬜).
+
 ---
 
 ## Stage 2 — Breakdown
@@ -74,34 +108,52 @@ Options: "Approved — proceed", "I want to make changes"
 
 If the user wants changes, work with them to adjust the list, then re-confirm. Only proceed when the user approves.
 
+After approval, **print the progress checklist** (Stages 1–2 ✅, Stage 3 🔄 with all chains ⬜, Stages 4–6 ⬜).
+
 ---
 
-## Stage 3 — Per-Subtask Research (Prompt Chain → Execute → Save)
+## Stage 3 — Prompt Chain Generation
 
-For each approved subtask, generate a prompt chain and immediately execute it before moving to the next subtask. This keeps each subtask self-contained: plan it, research it, save it.
+Generate a Socratic prompt chain for **every** approved subtask before any research begins. This separates planning from execution and gives a clear view of the full research agenda.
+
+**Print the progress checklist** (Stages 1–2 ✅, Stage 3 🔄, Stages 4–6 ⬜) before starting.
 
 1. Create `workspace\tasks\` directory
-2. For each subtask, run the following sequence:
-
-### 3a. Generate Prompt Chain
-
+2. For each subtask (in order):
+   - Mark it 🔄 in the checklist with `← generating`
    - Derive `<task-slug>` from the subtask title (kebab-case, max 6 words)
    - Create `workspace\tasks\<nn>-<task-slug>\` directory (nn = 01, 02, ...)
    - Invoke `/create-prompts` with the subtask description as argument
-   - Direct local save to the task directory
-   - Copy/move the output to `workspace\tasks\<nn>-<task-slug>\prompt-chain.md`
+   - Save the output to `workspace\tasks\<nn>-<task-slug>\prompt-chain.md`
+   - Mark it ✅ in the checklist and reprint
 
-### 3b. Execute Prompt Chain
+After all chains are saved, **print the progress checklist** (Stages 1–3 ✅, Stage 4 🔄 with all subtasks ⬜, Stages 5–6 ⬜).
 
-   - Invoke `/run-prompt-chain` with the prompt chain file path as argument
+---
+
+## Stage 4 — Research Execution
+
+Execute the prompt chains and save all outputs. Process subtasks sequentially — complete one fully before starting the next.
+
+**Rate limit discipline:** Do not start the next subtask until the current one is fully saved to disk. This avoids compounding concurrent API load.
+
+For each subtask:
+
+   **Before starting**, print the checklist marking it 🔄 with `← executing chain`.
+
+### 4a. Execute Prompt Chain
+
+   - Invoke `/run-prompt-chain` with `workspace\tasks\<nn>-<task-slug>\prompt-chain.md` as argument
    - `/run-prompt-chain` handles:
      - Classifying prompts as `[independent]` or `[sequential]`
-     - Running independent prompts in parallel via sub-agents
+     - Running independent prompts in **capped parallel batches of max 3 agents** to avoid rate limits
      - Running sequential chains in order with cumulative context
-     - Saving individual prompt outputs to `workspace\tasks\<nn>-<task-slug>\prompts\<nn>-<prompt-slug>.md`
+     - Saving individual prompt outputs to `workspace\tasks\<nn>-<task-slug>\prompts\<nn>-<prompt-slug>.md` **immediately as each completes**
      - Merging all outputs into `workspace\tasks\<nn>-<task-slug>\research.md`
+   - **If `/run-prompt-chain` reports a rate limit error:** wait 60 seconds, then retry the failed prompt(s) only. Retry up to 3 times (60s → 120s → 240s). Do not restart the whole chain. Reprint checklist with `⚠️ rate limit — retrying (attempt N/3)` on the affected subtask line.
+   - After chain completes, reprint checklist with step note `← saving to Notion`
 
-### 3c. Save Prompt Outputs to Notion
+### 4b. Save Prompt Outputs to Notion
 
    - For each file in `workspace\tasks\<nn>-<task-slug>\prompts\*.md`:
      - Read the file to extract the prompt text and answer content
@@ -112,28 +164,23 @@ For each approved subtask, generate a prompt chain and immediately execute it be
        - `workspace_path`: the workspace path
        - `local_filename`: (already saved by /run-prompt-chain — skip local save)
        - `project_page_url`: the matched project page URL from Stage 1
+   - After Notion save completes, reprint checklist marking the subtask ✅
 
-3. Process subtasks sequentially — each subtask's prompt chain is generated and executed before starting the next.
-
----
-
-## Stage 4 — Save Top-Level Research
-
-Save the consolidated research to both local workspace and Notion.
-
-The task-level `research.md` files and individual prompt outputs are already saved. This stage saves the top-level research entry that ties everything together.
-
-This will be done after synthesis and presentation are complete (in Stage 6).
+After all subtasks complete, **print the progress checklist** (Stages 1–4 ✅, Stage 5 🔄, Stage 6 ⬜).
 
 ---
 
 ## Stage 5 — Synthesis
+
+**Print the progress checklist** (Stages 1–4 ✅, Stage 5 🔄, Stage 6 ⬜).
 
 Synthesise all research into a unified answer to the original scope.
 
 1. Invoke `/synthesise-research` with the workspace directory as argument
    - It reads `00-scope.md` + all `tasks/*/research.md` files
    - It produces `workspace\synthesis.md`
+
+After synthesis is saved, **print the progress checklist** (Stages 1–5 ✅, Stage 6 🔄).
 
 ---
 
@@ -172,6 +219,8 @@ Combine the diagram(s) and brief into `workspace\presentation.md`:
 
 Save to `workspace\presentation.md`.
 
+**Print the progress checklist** (Stages 1–5 ✅, Stage 6 🔄 `← saving to Notion`).
+
 ### 6d. Save to Notion
 Invoke `/save-research` with:
 - `title`: `[Research] <Scope Title>`
@@ -179,6 +228,8 @@ Invoke `/save-research` with:
 - `workspace_path`: the workspace path
 - `local_filename`: `presentation.md` (already saved — skip local save)
 - `project_page_url`: the matched project page URL
+
+After Notion save completes, **print the final progress checklist** with all stages ✅.
 
 ---
 
@@ -210,11 +261,18 @@ Open diagrams/*.html in your browser for interactive visualisations.
 
 ## Error Handling
 
-- **Fail fast.** If any stage fails, stop immediately.
+- **Rate limit errors are retryable — do not fail fast on them.** If any sub-skill or agent returns a rate limit signal (HTTP 429, "rate limit exceeded", "out of credits", "overloaded", or similar):
+  1. Immediately write all completed outputs that exist in memory to their disk files before doing anything else.
+  2. Wait 60 seconds.
+  3. Retry the failed operation only (not the whole stage).
+  4. If it fails again, wait 120 seconds and retry. Then 240 seconds.
+  5. After 3 failed retries, stop and tell the user: which prompt/subtask failed, the workspace path, and which files were saved so they can resume manually.
+- **Save incrementally — never hold results in memory.** Write each prompt output file to disk the moment it is returned, before starting the next prompt or agent. Do not batch saves.
+- **Fail fast on non-rate-limit errors.** If any stage fails for a reason other than rate limiting, print the progress checklist with the failed stage marked ❌ and a brief error note, then stop.
 - **Report clearly.** Tell the user which stage failed, what error occurred, and what was completed successfully.
-- **Save what you have.** Before stopping on failure, ensure all completed outputs are saved to disk.
+- **Save what you have.** Before stopping on any failure, ensure all completed outputs are written to disk.
 - **Notion failures are non-fatal.** If Notion saves fail, continue with local saves and report the Notion errors at the end.
-- **Sub-skill failures.** If `/create-prompts`, `/run-prompt-chain`, `/synthesise-research`, `/select-diagram`, or `/executive-brief` fails, report the error with the skill name and stop.
+- **Sub-skill failures.** If `/create-prompts` (Stage 3), `/run-prompt-chain` (Stage 4), `/synthesise-research` (Stage 5), `/select-diagram`, or `/executive-brief` (Stage 6) fails for a non-rate-limit reason, report the error with the skill name and stage, then stop.
 
 ---
 

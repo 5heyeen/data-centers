@@ -37,12 +37,15 @@ Group them into execution batches:
 Process batches in order:
 
 ### For a `parallel` batch:
-- Spawn one `Agent` per prompt (subagent_type: `general-purpose`)
+- **Cap concurrency at 3.** If the batch has more than 3 prompts, split it into sub-batches of 3. Process each sub-batch fully before starting the next.
+- For each sub-batch, spawn one `Agent` per prompt (subagent_type: `general-purpose`)
 - Each agent receives:
   - The research topic context (from the prompt chain header)
   - Its specific prompt to answer
   - Instruction: "Conduct deep research using your knowledge and WebSearch. Provide a thorough, well-sourced answer. Include specific data, examples, and citations where possible. Aim for 300-800 words."
-- All agents run concurrently
+- Wait for all agents in the sub-batch to complete before starting the next sub-batch
+- **Save each agent's output to disk immediately when it returns**, before waiting for other agents in the same sub-batch
+- **If an agent returns a rate limit error** (HTTP 429, "rate limit", "credits", "overloaded"): wait 60 seconds, then retry that individual prompt. Retry up to 3 times (60s → 120s → 240s). If all retries fail, save what was completed and report the failure.
 - Collect all results
 
 ### For a `sequential` batch:
@@ -52,6 +55,7 @@ Process batches in order:
 - Build cumulative context across the chain
 
 ### For each prompt executed (regardless of batch type):
+- **Save to disk immediately when the result is returned** — do not wait for other prompts in the batch to finish.
 - Save the output to a local file: `<workspace>/prompts/<nn>-<prompt-slug>.md`
   - Format:
     ```markdown
@@ -120,6 +124,7 @@ Tell the user:
 - **Cite sources.** When using web search results, include the source URL or reference.
 - **Respect the dependency tags.** Never run a `[sequential]` prompt in parallel — it needs prior context to produce a good answer.
 - **Save every individual prompt output.** Even if a prompt produces a short answer, save it as its own file.
-- **Fail fast on errors.** If a prompt execution fails, report which prompt failed, save what you have so far, and stop. Do not silently skip prompts.
+- **Rate limit errors are retryable.** If a prompt execution hits a rate limit (HTTP 429, "rate limit", "credits", "overloaded"), wait 60 seconds and retry. Retry up to 3 times (60s → 120s → 240s). Only fail if all retries are exhausted.
+- **Fail fast on non-rate-limit errors.** If a prompt execution fails for any other reason, report which prompt failed, save what you have so far, and stop. Do not silently skip prompts.
 - **Do not modify the prompt chain file.** It is read-only input.
 - **The workspace path** is derived from the prompt chain file's parent directory. If the prompt chain is at `tasks/01-foo/prompt-chain.md`, the workspace is `tasks/01-foo/`.
