@@ -1,0 +1,261 @@
+[
+  {
+    "sheet": "Monthly report",
+    "row": 15,
+    "column": "B",
+    "value": "Infrastructure & Final Construction Design Review Complete",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 15,
+    "column": "C",
+    "value": "02.02.2023",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 15,
+    "column": "D",
+    "value": "02.02.2023",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 16,
+    "column": "B",
+    "value": "Wells Form (Signal LI) og Ventil",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 16,
+    "column": "C",
+    "value": "08.02.2023",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 17,
+    "column": "B",
+    "value": "Building working and Available for Client works",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 18,
+    "column": "B",
+    "value": "Networks rooms clean and available for Client works",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 18,
+    "column": "C",
+    "value": "06.06.2023",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 19,
+    "column": "B",
+    "value": "Customer SE Mechanical Ready Include",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 19,
+    "column": "C",
+    "value": "15.09.2023",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 20,
+    "column": "B",
+    "value": "Completed UPS Installation",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 20,
+    "column": "C",
+    "value": "20.03.2024",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 21,
+    "column": "B",
+    "value": "Customer 122 Mechanisk Party Access",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 21,
+    "column": "C",
+    "value": "20.12.2024",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 22,
+    "column": "B",
+    "value": "UNCERTAIN: Early access / release",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 22,
+    "column": "C",
+    "value": "09.11.2025",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 22,
+    "column": "D",
+    "value": "09.11.4500",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 23,
+    "column": "B",
+    "value": "CLQna issued no final",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 24,
+    "column": "B",
+    "value": "Draft CQIs issued",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 25,
+    "column": "B",
+    "value": "D4",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 25,
+    "column": "C",
+    "value": "30.11.2025",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 26,
+    "column": "B",
+    "value": "White block, completed (1/4 signed off all)",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 27,
+    "column": "B",
+    "value": "P1",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 27,
+    "column": "C",
+    "value": "10.02.2025",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 14,
+    "column": "H",
+    "value": "Budget/result/plan",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 14,
+    "column": "I",
+    "value": "Budget (incl. additionally)",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 14,
+    "column": "J",
+    "value": "Imported status",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 22,
+    "column": "H",
+    "value": "PROJECT COST",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 22,
+    "column": "I",
+    "value": "1,607,126",
+    "data_type": "number"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 27,
+    "column": "I",
+    "value": "2,560",
+    "data_type": "number"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 26,
+    "column": "I",
+    "value": "1,489,000",
+    "data_type": "number"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 30,
+    "column": "A",
+    "value": "IMPORTANT ISSUES/PROBLEMS",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 31,
+    "column": "A",
+    "value": "UNCERTAIN: to reflect the constructive milestones and current status/internal/External focus",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 33,
+    "column": "A",
+    "value": "CTS performance per today not adequate and being mopped by Project team - to make sure they recover adequately/plan follows up",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 33,
+    "column": "F",
+    "value": "Remaining M3 CL4 + c2b5 (4) to be submitted as soon as schedules are completed",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 34,
+    "column": "A",
+    "value": "UNCERTAIN: constructional flexibility/other considerations safely/as required",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 34,
+    "column": "F",
+    "value": "CTS performance declining reference to Q1, Q2, Q4, Bulk position is that CTS is responsible for completing work/safely/to code",
+    "data_type": "text"
+  }
+]

@@ -1,0 +1,415 @@
+[
+  {
+    "sheet": "Monthly report",
+    "row": 1,
+    "column": "A",
+    "value": "Document template: PRO1-FM-Arkill, Rev. 25, Dato: 18.06.2023",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 2,
+    "column": "A",
+    "value": "MONTHLY REPORT",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 2,
+    "column": "F",
+    "value": "bulk",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 2,
+    "column": "H",
+    "value": "Bulk infrastructure by BDC Build Estate AS",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 4,
+    "column": "A",
+    "value": "PROJECT",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 4,
+    "column": "B",
+    "value": "PRO1 - Pegasus phase 2",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 5,
+    "column": "A",
+    "value": "PROJECT MANAGER",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 6,
+    "column": "A",
+    "value": "OVERALL PROJECT STATUS: BDC DETACH3 BULDGE",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 6,
+    "column": "C",
+    "value": "BDC - under decisions to plan",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 6,
+    "column": "F",
+    "value": "95,64% delivered to plan",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 6,
+    "column": "H",
+    "value": "GROSS: up to",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 6,
+    "column": "I",
+    "value": "01.04.26",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 8,
+    "column": "A",
+    "value": "Status plan defined success criteria",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 8,
+    "column": "C",
+    "value": "Priority",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 8,
+    "column": "E",
+    "value": "Notes",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 8,
+    "column": "G",
+    "value": "Comments if any",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 9,
+    "column": "A",
+    "value": "Time (S %)",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 9,
+    "column": "C",
+    "value": "Major",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 9,
+    "column": "E",
+    "value": "UNCERTAIN: LECA activities pending extra Kapitalises",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 10,
+    "column": "A",
+    "value": "Cost",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 11,
+    "column": "A",
+    "value": "Quality",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 12,
+    "column": "A",
+    "value": "HSE",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 14,
+    "column": "A",
+    "value": "Report(s)",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 14,
+    "column": "C",
+    "value": "Contractual End",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 14,
+    "column": "D",
+    "value": "New Baseline",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 14,
+    "column": "E",
+    "value": "Collection",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 14,
+    "column": "F",
+    "value": "Status",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 14,
+    "column": "G",
+    "value": "Budget/result/plan",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 14,
+    "column": "H",
+    "value": "BCWS Cumulative EA (to date)",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 14,
+    "column": "I",
+    "value": "Budget",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 14,
+    "column": "J",
+    "value": "Payment details",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 15,
+    "column": "B",
+    "value": "Infrastructure & Final Construction Design Review Complete",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 15,
+    "column": "C",
+    "value": "02.02.2023",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 15,
+    "column": "D",
+    "value": "02.02.2023",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 15,
+    "column": "H",
+    "value": "Budgeted",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 15,
+    "column": "I",
+    "value": "1,007,160",
+    "data_type": "number"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 16,
+    "column": "B",
+    "value": "Wells Floors (Signal LI) og ventil",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 16,
+    "column": "C",
+    "value": "08.02.2023",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 17,
+    "column": "B",
+    "value": "Building Available for Client Works",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 18,
+    "column": "B",
+    "value": "Networks rooms clean and available for Client works",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 18,
+    "column": "C",
+    "value": "06.06.2023",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 19,
+    "column": "B",
+    "value": "Customer SE Mechanical Ready Include",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 19,
+    "column": "C",
+    "value": "15.09.2023",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 20,
+    "column": "B",
+    "value": "Completed UPS Installation complete",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 20,
+    "column": "C",
+    "value": "20.03.2024",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 21,
+    "column": "B",
+    "value": "Customer 122 Mechanisk Party Access",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 21,
+    "column": "C",
+    "value": "20.12.2024",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 22,
+    "column": "B",
+    "value": "White Block, completed",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 22,
+    "column": "C",
+    "value": "30.11.2025",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 22,
+    "column": "D",
+    "value": "30.11.2025",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 23,
+    "column": "B",
+    "value": "Ventils Block, completed / 1/4 signed off all",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 24,
+    "column": "B",
+    "value": "Draft CQIs issued",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 24,
+    "column": "C",
+    "value": "01.11.2025",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 25,
+    "column": "B",
+    "value": "CQua issued no final P84",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 26,
+    "column": "B",
+    "value": "Praktisk ferdigstillelse",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 26,
+    "column": "C",
+    "value": "10.02.2025",
+    "data_type": "date"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 22,
+    "column": "H",
+    "value": "PROJECT COST",
+    "data_type": "text"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 22,
+    "column": "I",
+    "value": "1,607,126",
+    "data_type": "number"
+  },
+  {
+    "sheet": "Monthly report",
+    "row": 26,
+    "column": "I",
+    "value": "1,489,000",
+    "data_type": "number"
+  }
+]
