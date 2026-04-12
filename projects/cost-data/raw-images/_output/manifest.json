@@ -1,0 +1,699 @@
+{
+  "input_dir": "/home/user/dc-gtm/projects/cost-data/raw-images",
+  "files": {
+    "240-C-AA-001_01_001.xlsx": {
+      "original_title": "240-C-AA-001_01_001 - Skrivebeskyttet",
+      "project": "PROJECT DCM103 - Application for Payment No.01 - Feb 26",
+      "sheets": [
+        "Cover Sheet",
+        "Executive Summary",
+        "Breakdown",
+        "Variations"
+      ],
+      "photos": [
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5435.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5435.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5436.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5436.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5438.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5438.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5439.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5439.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5440.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5440.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5441.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5441.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5442.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5442.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5443.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5443.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5444.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5444.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5445.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5445.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5446.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5446.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5447.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5447.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5448.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5448.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5449.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5449.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5450.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5450.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5451.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5451.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5452.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5452.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5453.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5453.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5454.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5454.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5455.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5455.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5456.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5456.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5457.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5457.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5458.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5458.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5459.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5459.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5460.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5460.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5461.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5461.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5462.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5462.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5463.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5463.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5464.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5464.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5465.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5465.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5466.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5466.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5467.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5467.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5468.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5468.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5469.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5469.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5470.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5470.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5471.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5471.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5472.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5472.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5473.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5473.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5474.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5474.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5475.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5475.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5476.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5476.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5477.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5477.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5478.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5478.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5479.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5479.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5480.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5480.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5481.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5481.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5482.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5482.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5483.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5483.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5484.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5484.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5485.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5485.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5486.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5486.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5487.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5487.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5488.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5488.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5489.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5489.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5490.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5490.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5491.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5491.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5492.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5492.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5493.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5493.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5494.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5494.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5495.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5495.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5496.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5496.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5497.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5497.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5498.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5498.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5499.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5499.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5500.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5500.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5501.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5501.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5502.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5502.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5503.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/240-C-AA-001_01_001/IMG_5503.jpg"
+        }
+      ],
+      "sheet_assignments": {
+        "Breakdown": {
+          "range": "IMG_5435-IMG_5497",
+          "description": "Main cost breakdown scrolling down"
+        },
+        "Variations": {
+          "range": "IMG_5498",
+          "description": "Change Account sheet"
+        },
+        "Executive Summary": {
+          "range": "IMG_5499-IMG_5502",
+          "description": "Summary with totals and payment valuation"
+        },
+        "Cover Sheet": {
+          "range": "IMG_5503",
+          "description": "Cover page with CTS Nordics branding"
+        }
+      }
+    },
+    "PRO1050-DCM102.xlsx": {
+      "original_title": "PRO1050 - DCM102 - Application for Payment No.14 - Mar 26",
+      "project": "PRO1050 - Pegasus 2 - Application for Payment No.14 - Mar 26",
+      "sheets": [
+        "Cost Plan Cover",
+        "Cumulative To Date",
+        "1. Preliminaries",
+        "2c. Fitout Phase 2",
+        "3. Mechanical Phase 2",
+        "4. Electrical Phase 2",
+        "4b. Phase 2 White Space 1 Floor",
+        "5. Special Phase 2",
+        "5c. Commissioning",
+        "6b. POC Phase 2",
+        "7. External Phase 2",
+        "9. Variation Orders"
+      ],
+      "photos": [
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5505.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5505.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5506.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5506.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5507.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5507.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5508.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5508.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5509.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5509.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5510.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5510.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5511.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5511.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5512.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5512.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5513.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5513.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5514.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5514.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5515.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5515.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5516.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5516.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5517.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5517.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5518.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5518.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5519.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5519.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5520.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5520.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5521.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5521.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5522.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5522.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5523.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5523.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5524.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5524.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5525.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5525.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5526.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5526.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5527.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5527.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5528.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5528.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5529.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5529.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5530.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5530.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5531.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5531.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5532.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5532.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5533.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5533.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5534.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5534.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5535.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5535.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5536.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5536.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5537.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5537.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5538.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5538.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5539.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5539.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5540.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5540.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5541.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5541.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5542.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5542.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5543.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5543.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5544.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5544.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5545.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5545.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5546.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5546.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5547.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5547.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5548.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5548.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5549.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5549.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5550.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5550.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5551.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5551.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5552.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5552.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5553.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5553.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5554.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5554.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5555.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5555.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5556.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5556.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5557.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5557.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5558.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5558.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5559.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/PRO1050-DCM102/IMG_5559.jpg"
+        }
+      ],
+      "sheet_assignments": {}
+    },
+    "Kopi-av-239-B-AA-001_10_001.xlsx": {
+      "original_title": "Kopi av 239-B-AA-001_10_001 07.04 2026",
+      "project": "239 Payment DCM102 Pegasus Phase 2 - Budget Report",
+      "sheets": [
+        "Monthly report",
+        "Budget",
+        "Current Estimate",
+        "Code plan",
+        "Variations",
+        "Paid"
+      ],
+      "photos": [
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5560.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5560.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5561.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5561.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5562.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5562.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5563.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5563.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5564.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5564.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5565.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5565.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5566.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5566.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5567.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5567.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5568.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5568.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5569.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5569.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5570.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5570.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5571.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5571.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5572.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5572.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5573.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5573.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5574.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5574.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5575.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5575.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5576.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5576.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5577.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5577.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5578.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5578.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5579.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5579.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5580.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5580.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5581.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5581.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5582.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5582.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5583.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5583.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5584.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5584.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5585.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5585.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5586.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5586.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5587.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5587.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5588.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5588.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5589.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5589.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5590.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5590.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5591.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5591.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5592.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5592.jpg"
+        },
+        {
+          "path": "/home/user/dc-gtm/projects/cost-data/raw-images/IMG_5593.jpg",
+          "sorted_path": "/home/user/dc-gtm/projects/cost-data/raw-images/_output/sorted/Kopi-av-239-B-AA-001_10_001/IMG_5593.jpg"
+        }
+      ],
+      "sheet_assignments": {}
+    }
+  }
+}
