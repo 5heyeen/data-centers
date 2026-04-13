@@ -301,13 +301,25 @@ For EACH photo, do these steps in order:
 
 ## CRITICAL RULES — READ CAREFULLY
 
+- **Read the ACTUAL column letters from the photo.** Look at the spreadsheet's column
+  header bar (A, B, C, D, E, F, G... shown at the very top of the spreadsheet area).
+  Map every cell to its REAL column letter. Never guess columns — always read them.
+- **Read the ACTUAL row numbers from the photo.** Look at the spreadsheet's row number
+  gutter (1, 2, 3, 4... shown on the left margin). Map every cell to its REAL row number.
+  Never count rows sequentially — always read the number from the margin.
+- **Recreate ALL column header names.** The first step for any photo is to extract the
+  column headers (the row that contains labels like "Post", "COST ELEMENT", "Budget",
+  "Reestimate", etc.). These headers define what data belongs in each column.
+- **Double-check every value against its column header.** After extracting a cell, verify:
+  1. The column letter is correct by tracing up from the cell to the column header bar.
+  2. The value makes sense under that column's header (e.g., a number should be under
+     "Budget", not under "COST ELEMENT"; text descriptions should be under "Description"
+     or "COST ELEMENT", not under a numeric column).
+  3. The data_type matches (numbers under numeric columns, text under text columns,
+     dates under date columns, percentages under % columns).
 - **Extract ALL visible numbers** — every cost, quantity, unit price, total, percentage.
   These numerical values are the MOST IMPORTANT part of the extraction.
 - **Use exact values as displayed**: "1,234,567" not "1234567", "15.5%" not "0.155"
-- **Row numbers come from the spreadsheet margin** (the numbers on the left side of the
-  spreadsheet), NOT from counting rows sequentially.
-- **Column letters come from the spreadsheet header** (A, B, C, ... shown at the top),
-  NOT from guessing.
 - **Do NOT summarize.** Do NOT write prose descriptions like "cost data follows".
   Write the actual cell value for every single cell.
 - **Do NOT skip cells** because they seem repetitive or unimportant.
@@ -315,6 +327,31 @@ For EACH photo, do these steps in order:
   for checkpoint/resume. If you read all photos first and save later, a timeout loses
   everything.
 - If a value is hard to read, use "UNCERTAIN: <best guess>" as the value.
+
+## Cell Mapping Procedure (mandatory for every photo)
+
+Follow this exact sequence for each photo:
+
+1. **Read column letters** — Look at the column header bar at the top of the spreadsheet.
+   List every visible column letter (e.g., "Visible columns: A, B, C, D, E, F, G, H, I, J, K, L").
+
+2. **Read row numbers** — Look at the row number gutter on the left margin.
+   Note the first and last visible row (e.g., "Visible rows: 3 through 22").
+
+3. **Extract column headers** — Find the header row (usually the first row with bold
+   text labels). For each column, record the header text:
+   ```
+   A=Post, B=COST ELEMENT, C=(empty), D=Budget, E=Reestimate, F=Budget with allowance, ...
+   ```
+
+4. **Extract data cells** — For each data row, trace each cell UP to its column letter
+   and verify it aligns with the correct header. Record the cell.
+
+5. **Validation pass** — Review all extracted cells and check:
+   - Is every number under a numeric column header? (Budget, Reestimate, Total, etc.)
+   - Is every text string under a text column header? (COST ELEMENT, Description, etc.)
+   - Are the row numbers consistent with what's visible in the left margin?
+   - If anything looks misaligned, re-read the photo and fix the mapping.
 
 ## Example output for one photo
 
@@ -541,9 +578,31 @@ if mismatches:
 PYEOF
 ```
 
-### 5d. Commit, Push & Provide Download Links
+### 5d. Export CSV Copy
 
-Commit and push the created Excel file so the user can download it from GitHub:
+In addition to the .xlsx file, create a CSV copy of each sheet for easy import into Google Sheets:
+
+```bash
+python3 << 'PYEOF'
+import csv, os
+from openpyxl import load_workbook
+
+xlsx_path = "<input-dir>/_output/output/<filename>"
+wb = load_workbook(xlsx_path)
+
+for ws in wb.worksheets:
+    csv_path = xlsx_path.replace('.xlsx', f'_{ws.title}.csv')
+    with open(csv_path, 'w', newline='', encoding='utf-8') as f:
+        writer = csv.writer(f)
+        for row in ws.iter_rows(values_only=True):
+            writer.writerow(row)
+    print(f"CSV: {csv_path}")
+PYEOF
+```
+
+### 5e. Commit, Push & Provide Download Links
+
+Commit and push the created Excel and CSV files so the user can download from GitHub:
 
 ```bash
 git add "<input-dir>/_output/output/<filename>"
