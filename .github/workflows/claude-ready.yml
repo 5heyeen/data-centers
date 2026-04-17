@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   claude-work:
-    if: github.event.label.name == 'Ready for Claude'
+    if: github.event.label.name == 'ready-for-claude'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,5 +21,5 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          label_trigger: "Ready for Claude"
+          label_trigger: "ready-for-claude"
           claude_args: "--max-turns 15"
