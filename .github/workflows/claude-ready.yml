@@ -1,8 +1,8 @@
 name: Claude Auto-Issue Worker
 
 on:
-  issues:
-    types: [labeled]
+  projects_v2_item:
+    types: [edited]
 
 permissions:
   contents: write
@@ -12,14 +12,63 @@ permissions:
 
 jobs:
   claude-work:
-    if: github.event.label.name == 'claude-ready'
+    if: github.event.projects_v2_item.content_type == 'Issue'
     runs-on: ubuntu-latest
     steps:
+      - name: Check status and resolve issue number
+        id: check
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const nodeId = context.payload.projects_v2_item.node_id;
+
+            const query = `
+              query($nodeId: ID!) {
+                node(id: $nodeId) {
+                  ... on ProjectV2Item {
+                    content {
+                      ... on Issue {
+                        number
+                      }
+                    }
+                    fieldValues(first: 20) {
+                      nodes {
+                        ... on ProjectV2ItemFieldSingleSelectValue {
+                          name
+                          field {
+                            ... on ProjectV2SingleSelectField {
+                              name
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            `;
+
+            const result = await github.graphql(query, { nodeId });
+            const item = result.node;
+            const statusField = item.fieldValues.nodes.find(
+              n => n.field?.name === 'Status'
+            );
+            const status = statusField?.name ?? '';
+            const issueNumber = String(item.content?.number ?? '');
+
+            console.log(`Status: "${status}", Issue: #${issueNumber}`);
+            core.setOutput('should_run', status === 'Ready for Claude' ? 'true' : 'false');
+            core.setOutput('issue_number', issueNumber);
+
       - uses: actions/checkout@v4
+        if: steps.check.outputs.should_run == 'true'
 
       - uses: anthropics/claude-code-action@v1
+        if: steps.check.outputs.should_run == 'true'
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          label_trigger: "claude-ready"
+          prompt: |
+            Work on issue #${{ steps.check.outputs.issue_number }} in this repository.
+            Read the issue, implement the required changes, and open a pull request.
           claude_args: "--max-turns 15"
