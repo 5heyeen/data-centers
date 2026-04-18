@@ -15,6 +15,7 @@ Expects structured input with these parameters (passed as key-value pairs or inf
 | `workspace_path` | Yes | Local workspace directory (e.g. `C:\Users\shelie\.claude\projects\skygard\research\ai-consulting\`) |
 | `local_filename` | Yes | Filename for local save (e.g. `synthesis.md` or `prompts/01-market-drivers.md`) |
 | `project_page_url` | Yes | Notion URL of the matched Metier project page |
+| `topic` | No | One or more Topic tags for the Document Library entry. Valid values: `"Contract Strategy"`, `"Project Management"`, `"Contract"`, `"Market Strategy"`, `"Competitive Analysis"`, `"Commercial Strategy"`, `"Regulation"`, `"Risk Management"`, `"Supply Chain"`, `"Research"`. Infer from content if not provided (e.g. synthesis → `["Research"]`, competitor research → `["Competitive Analysis", "Research"]`). |
 | `prompt_text` | No | If saving a prompt output, the original prompt text (will be rendered as a callout block) |
 
 If any required parameter is missing, check the conversation context. If still missing, ask the user.
@@ -56,10 +57,17 @@ If any step fails (project page not found, no Data & Research section, no Docume
 
 Use `mcp__claude_ai_Notion__notion-create-pages` to create an entry in the Document Library:
 
-- **Parent:** `data_source_id` from the Document Library (extracted in Step 3)
+- **Parent:** `data_source_id` from the Document Library (extracted in Step 3) — pass as `{"type": "data_source_id", "data_source_id": "<id>"}`. **Never use `page_id` here** — that creates a child page instead of a database entry.
 - **Properties:**
   - `Name`: the `title` parameter
-  - `Source`: `["Claude"]` (multi-select array)
+  - `Source`: `["Claude"]` (multi-select array — always set, never omit)
+  - `Topic`: the `topic` parameter as a JSON array (e.g. `["Competitive Analysis", "Research"]`). If `topic` was not provided, infer it from the content type:
+    - Synthesis or executive brief → `["Research"]`
+    - Competitor/market analysis → `["Competitive Analysis", "Research"]`
+    - Contract or procurement content → `["Contract Strategy", "Research"]`
+    - Regulatory content → `["Regulation", "Research"]`
+    - Risk content → `["Risk Management", "Research"]`
+    - GTM or commercial content → `["Market Strategy", "Research"]`
 - **Content:** The research content in markdown
 
 If `prompt_text` is provided, format the Notion page body as:
