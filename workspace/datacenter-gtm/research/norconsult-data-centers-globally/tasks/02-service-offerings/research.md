@@ -69,3 +69,39 @@ Norwegian-specific: Grid concession (konsesjon) from NVE alone takes 1–3 years
 | **D — Design consultant + GC** | Traditional architect + engineering consultant + general contractor. Used by first-time or lower-capability operators. | Skygard Oslo: COWI (design + MEP) + A-lab (architecture) |
 
 **Procurement structure drivers:** Operator maturity and in-house capability is the primary driver. Scale (>100MW favours EPCM or split packages). Speed (D&B with specialist). Risk appetite (EPC for risk aversion; EPCM for cost control). Norwegian NS 8405/8407 standard forms; "samspillsentreprise" (early contractor involvement) trending for complex projects.
+
+---
+
+## 5. The EPCM Oversight Gap — Where Metier Fits
+
+**The structural conflict:** EPCM firm is simultaneously owner's agent AND reimbursable contractor. When a project gets into trouble, the EPCM firm's interest is in protecting its own cost recovery — not in giving the owner an unvarnished assessment. An independent advisor owes no duty to the EPCM firm and has no interest in the EPCM firm's fee recovery.
+
+**Four hard scope gaps the EPCM firm structurally cannot fill:**
+
+1. **Owner governance / investor reporting** — EPCM manages construction workstreams, not the owner's internal stage-gate discipline, capital authorization, or investor reporting. This sits in a vacuum.
+2. **Pre-FEED contract packaging** — Critical decisions about splitting civil/MEP/power/IT fit-out into direct contracts are made before EPCM is fully engaged. Asking the EPCM firm to advise on a contract structure that determines its own future revenue is structurally problematic.
+3. **Independent cost/change order validation** — The EPCM firm cannot credibly challenge its own cost estimates. An independent advisor benchmarks EPCM claims against comparable projects with no conflict. (Mastt: "there could be conflicts of interest if the contractor prioritizes increasing project costs to maximize their fees.")
+4. **Lender/investor milestone certification** — Bulk's €410M loan (ABN Amro, Citibank Europe, Nordea) carries draw conditions tied to construction milestones. Lenders require an Independent Engineer who "issues drawdown certificates — arguably the most financially significant part of the job. Without this certificate, lenders do not release funds." The EPCM contractor cannot self-certify.
+
+**Lifecycle vulnerability:** Owner most exposed pre-FEED (concept/packaging decisions locked in); during construction (reimbursable cost escalation); at commissioning (EPCM managing its own punch-list sign-off).
+
+**Freshfields 2025:** "The Shift from EPC to EPCM: A Recipe for More Complex Arbitrations?" — disputes reaching arbitration are precisely those that well-structured independent owner advisory would have intercepted early (change order validation, delay attribution, cost recovery claims).
+
+**The Bulk N01 opening:** €410M institutional loan on a live construction project, Norconsult as reimbursable EPCM contractor, no documented independent technical advisor or owner's engineer on the owner side. **That is the gap.**
+
+---
+
+## 6. Norconsult DC Service Catalogue — Explicit / Implicit / Absent
+
+| DC Service Phase | Explicitly Claimed | Implicitly Delivered | Absent |
+|---|---|---|---|
+| **(1) Feasibility / Pre-FEED** | "Studies" (broad claim); sustainability studies | Pre-FEED power planning at N01 | Concept selection frameworks; technology choice advisory |
+| **(2) Site Selection & TDD** | Not marketed for DC | Urban planning / permitting applicable | DC-specific site selection; TDD advisory |
+| **(3) FEED / Concept Design** | "Detailing" from value chain claim | Grid connection FEED at N01 | FEED for internal DC systems; independent advisory role |
+| **(4) Detailed Design (MEP/Civil/Structural)** | Civil/structural/geotechnical; power engineering | Detailed civil/structural/HV electrical at Støleheia | MEP redundancy design (UPS, CRAC, busbars); Tier certification |
+| **(5) Procurement Support** | EPCM includes "anskaffelse" | Construction package tendering at N01 | Contract strategy as standalone; independent procurement advisory |
+| **(6) Construction Admin / EPCM** | **Core capability** — EPCM contract at N01 (NOK 3B+) | PM, engineering mgmt, supervision | Owner's Representative against separate EPCM contractor |
+| **(7) Commissioning / IST** | Not mentioned anywhere | Not identifiable | **Entirely absent** |
+| **(8) Operations & Asset Management** | Not mentioned | Not identifiable | **Entirely absent** |
+
+**Aas-Jakobsen acquisition (Aug 2025, NOK 1.43B):** Deepens civil/structural capacity. Does **not** close the MEP or commissioning gap.
