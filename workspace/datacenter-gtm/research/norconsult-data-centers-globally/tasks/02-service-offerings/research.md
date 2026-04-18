@@ -105,3 +105,54 @@ Norwegian-specific: Grid concession (konsesjon) from NVE alone takes 1–3 years
 | **(8) Operations & Asset Management** | Not mentioned | Not identifiable | **Entirely absent** |
 
 **Aas-Jakobsen acquisition (Aug 2025, NOK 1.43B):** Deepens civil/structural capacity. Does **not** close the MEP or commissioning gap.
+
+---
+
+## 7. Competitive Positioning: Norconsult vs. COWI / Sweco / Ramboll
+
+| Firm | DC Differentiation | Phases Covered | Norconsult Gap vs. Firm |
+|---|---|---|---|
+| **COWI** | Integrated sustainable design + urban infill; 900+ Norway staff; Skygard Oslo flagship; named in Nordic DC Construction Market report | 1–7 (full) | MEP/sustainability design; commissioning; architecture |
+| **Sweco** | "All DC services under one roof — from feasibility to commissioning"; in-house CFD; Tier-class design; explicit commissioning offer | 1–7 (full) | Site selection (Phase 2); internal MEP; commissioning (Phase 7) |
+| **Ramboll/EYP** | Deepest commissioning/IST capability via EYP acquisition; 70M+ sq ft designed; Owner's Engineer services; heat reuse (Meta Odense ~45MW) | 1–8 (full + ops) | IST/commissioning; Owner's Engineer; sustainability/net-zero advisory |
+| **Norconsult** | Large-scale Norwegian HV grid EPCM (N01 = unmatched reference); civil/structural/geotechnical at campus scale | 1, 3–6 partial | Phases 2, 7, 8 entirely absent; internal MEP absent |
+
+**Norconsult's defensible position:** The N01 Bulk engagement is a flagship Norwegian grid reference no competitor can match at 420kV scale. EPCM execution DNA from O&G/industrial heritage. Strong in phases where civil engineering and HV power dominate.
+
+---
+
+## 8. What DC Clients Expect — Table Stakes vs. Differentiators
+
+**Table stakes (elimination criteria):** Integrated MEP design; civil/structural; site feasibility/grid assessment; permitting/regulatory navigation; BIM LOD 350+; construction administration.
+
+**Differentiators by client type:**
+
+| Differentiator | Hyperscaler | Colocation | Domestic Operator |
+|---|---|---|---|
+| Speed / automated design | **Primary** | Differentiator | Less critical |
+| Sustainability / ESG | Mandatory (to their standard) | **Core differentiator** | **Core differentiator** |
+| Permitting / regulatory | Table stakes | Table stakes | **Core differentiator** |
+| Owner's Engineer / TDD | Less relevant | Differentiator (PE-backed) | Differentiator |
+| Power/energy strategy + BESS | Differentiator | **Core differentiator** | Differentiator |
+| Local/urban integration | Not applicable | Moderate | **Primary differentiator** |
+
+---
+
+## 9. Key Findings for Metier GTM
+
+1. **Norconsult = Tier 2 generalist with a single flagship DC reference (N01).** Strong HV grid and EPCM capability; absent from specialist MEP, commissioning, and independent advisory. Not a DC practice — a DC-active engineering firm.
+
+2. **Norconsult and Metier are structurally complementary, not competing.** Norconsult cannot offer independent owner's advisory when it is the EPCM contractor. Metier's independence is the structural opening.
+
+3. **The Bulk N01 opportunity is live and specific.** €410M institutional loan; Norconsult as reimbursable EPCM contractor; no documented independent technical advisor. Lender milestone certification, change order validation, and investor governance are all unfilled.
+
+4. **Procurement model determines the form of Metier's opportunity, not whether it exists.** In EPC: Owner's Engineer to challenge contractor claims. In EPCM: Independent advisor to validate the EPCM firm. In split packages: PMO to hold interfaces and master programme. Across all models: portfolio governance for PE/fund investors.
+
+5. **Norwegian DC market is bifurcating.** Hyperscalers (Google, CoreWeave, OpenAI Stargate) use in-house program management + multi-prime contracts — Metier unlikely to displace their internal teams. Domestic and colocation operators (Bulk, Green Mountain, Skygard, emerging independents) are the primary addressable market: less in-house capability, reliant on external advisory, often PE/fund-backed with investor governance needs.
+
+6. **COWI is the primary full-service competitor** in Norway for integrated engineering + advisory. Metier's differentiation from COWI: Metier does not design — purely advisory/governance, making it genuinely independent where COWI as designer has its own conflict.
+
+---
+
+*Sources: See individual prompt files 01–08 in /prompts/ for full citation list.*
+*Executed: 2026-04-17/18 | Subtask: 02-service-offerings*
