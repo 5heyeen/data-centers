@@ -49,3 +49,23 @@ Six primary differentiation axes — no firm leads on all six; commercial leader
 | **Tier 3 — Commoditized** | Civil/structural engineering; geotechnical; standard building services; regulatory/permitting; sustainability/ESG reporting | **Fully competent** |
 
 **Key implication:** Metier's owner's engineer service is strongest where governance, risk management, and procurement structuring dominate. DC-specific MEP technical review may require a specialist sub-contractor. **Metier's independence is the differentiator vs. Norconsult** — Norconsult's PM is integrated with design authority as EPCM contractor, so they cannot offer independent owner's advisory.
+
+---
+
+## 4. DC Project Lifecycle and Norwegian Procurement Structures
+
+**Phase gates (3–6 year total span):**
+G0: Site selection / concept → G1: FEED authorized → G2: Construction mobilization → G3: Commissioning → Operations (10–20+ years, modular re-entry into phases 3–6 for each expansion)
+
+Norwegian-specific: Grid concession (konsesjon) from NVE alone takes 1–3 years. Grid connection is structurally always a **separate EPCM package** due to NVE regulatory requirements — confirmed by Bulk/Norconsult split (campus EPCM + separate HV infrastructure EPCM).
+
+**Three dominant Norwegian procurement models (from public project data):**
+
+| Model | Description | Norwegian Example |
+|---|---|---|
+| **A — Design-Build / EPC** | Single contractor delivers E+P+C under lump-sum or GMP. Owner retains 2–5 person team + commissioning agent. | Bulk N01 (CTS Nordics); Green Mountain OSL-Enebakk (CTS Nordics) |
+| **B — Multi-prime split packages** | Core & shell to civil GC; MEP/critical systems as separate packages. Owner's in-house team coordinates. | Google Skien: Skanska NOK 1.1B civils + NOK 569M core/shell; ZAUNERGROUP MEP fit-out |
+| **C — EPCM** | Owner holds all trade contracts; EPCM firm manages on owner's behalf. Full cost transparency; owner bears execution risk. | Bulk N01: Norconsult EPCM for power infrastructure (420kV, 145kV transformer stations) |
+| **D — Design consultant + GC** | Traditional architect + engineering consultant + general contractor. Used by first-time or lower-capability operators. | Skygard Oslo: COWI (design + MEP) + A-lab (architecture) |
+
+**Procurement structure drivers:** Operator maturity and in-house capability is the primary driver. Scale (>100MW favours EPCM or split packages). Speed (D&B with specialist). Risk appetite (EPC for risk aversion; EPCM for cost control). Norwegian NS 8405/8407 standard forms; "samspillsentreprise" (early contractor involvement) trending for complex projects.
