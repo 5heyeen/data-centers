@@ -47,3 +47,49 @@ Norconsult's DC reference base is **exclusively Norwegian** — no confirmed DC 
 | Sigma2 / UNINETT / HPC | No evidence |
 | Narvik / Nscale / Aker DC | No evidence — HENT building |
 | Statsbygg / government DC | No evidence |
+
+---
+
+## 5. Portfolio Strength vs. Competitors
+
+| Firm | Norway DC Projects | Global Scale | Differentiator |
+|---|---|---|---|
+| Ramboll/EYP | Active (heat reuse advisory) | 70M+ sq ft; 1,000+ projects globally | IST/commissioning; Owner's Engineer; heat reuse |
+| COWI | 2+ confirmed (Skygard, Green Mountain) | Named in Nordic DC Construction Market report | MEP + sustainability + urban infill; full lifecycle |
+| Sweco | Active (multiple Norwegian colocation) | Pan-Nordic practice; in-house CFD | Feasibility → commissioning under one contract |
+| **Norconsult** | 5 confirmed DC (3 planning, 1 EPCM, 1 HV) | Norway only | N01 EPCM — largest Norwegian DC execution reference |
+
+**Norconsult holds the most credible single Norwegian EPCM reference.** But the portfolio is thinner (5 vs. 1,000+ for Ramboll), narrower (Norway only), and absent from MEP, commissioning, and owner's advisory entirely.
+
+---
+
+## 6. Credible Bid Scope for Future Norwegian DC Projects
+
+| Scope | Norconsult Credibility | Basis |
+|---|---|---|
+| HV grid connection engineering (420kV/145kV) | **Very high** | N01 power infra + Skillemoen substation |
+| EPCM for campus-scale DC construction | **High** | N01 campus EPCM (NOK 3B+ project) |
+| Regulatory planning / land-use for DC sites | **High** | Telemark + Vestfold for Statkraft |
+| Civil / geotechnical / structural | **High** | Industrial heritage + Aas-Jakobsen acquisition |
+| MEP design (UPS, cooling, redundancy) | **Low** | No confirmed DC MEP reference |
+| Commissioning / IST | **None** | No reference anywhere |
+| Independent owner's advisory / Owner's Engineer | **None** — structural conflict as EPCM | N01 EPCM role precludes this |
+
+---
+
+## 7. Key Findings for Metier GTM
+
+1. **Norconsult has 5 confirmed DC projects — all in Norway, all in engineering/delivery roles.** Three are regulatory planning; one is EPCM construction; one is HV power engineering. No commissioning, no owner's advisory, no MEP design credits.
+
+2. **The Statkraft relationship is Norconsult's most important DC client relationship.** Two of five confirmed DC projects (Telemark/Google, Vestfold) were done for Statkraft. Any future Statkraft-linked DC operator entering Norway is a target for Metier — Norconsult will be their site planner, not their project governor.
+
+3. **The N01 Lender's Independent Engineer role is live and unoccupied publicly.** €410M loan, three institutional lenders, Norconsult conflicted. This is the most specific, immediately actionable Metier opportunity surfaced by this research.
+
+4. **Norconsult's DC portfolio confirms the service mapping from subtask 02.** The project evidence directly corroborates the gap analysis: strong in Tier 2 (HV grid, EPCM), absent from Tier 1 (MEP, IST) and from independent advisory entirely.
+
+5. **No evidence of Norconsult competing with Metier for owner's advisory work.** They are not in the same bid pool for PMC or Owner's Engineer roles.
+
+---
+
+*Sources: See individual prompt files 01–05 in /prompts/ for full citation list.*
+*Executed: 2026-04-18 | Subtask: 03-reference-projects*
