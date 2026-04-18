@@ -17,3 +17,33 @@
 | 7* | Skillemoen Substation 420kV | Statnett / Jacobsen Elektro | Finnmark | First 420kV station in Finnmark | Designer for EPC (420kV substation design) | Yes (DC-adjacent) | Feb–Dec 2018 |
 
 *Projects 6–7 are DC-adjacent (HV industrial EPCM / substation design).
+
+---
+
+## 2. N01 Støleheia — Key Details
+
+**Two distinct scopes, likely two contract packages:**
+- Scope A (campus EPCM): covers DCM102 data hall construction — PM, engineering management, procurement, CM, systematic completion. Tool: Norconsult's UnoSys platform. Named contact: Sten-Ole Nilsen (Group Director, Renewable Energy).
+- Scope B (power infrastructure): engineers Bulk's *private* on-site substations and 420kV lines. Does NOT cover Statnett's Stemmen 420kV public grid station (NOK 1,100–1,500M Statnett investment — separate project, no Norconsult role confirmed).
+
+**Current status (April 2026):** DCM102 (42MW) operational since Q1 2025; CoreWeave GB200 NVL72 deployed Summer 2025; EPCM contract ongoing through end 2026; €410M senior loan (ABN Amro, Citibank Europe, Nordea) closed November 2025.
+
+**Critical gap — Lender's Independent Engineer:** No lender's technical advisor publicly named for the €410M loan. Norconsult's EPCM role is a conflict of interest disqualifying them from this function. A separate firm was almost certainly retained but not publicized. **This is Metier's most specific live opportunity.**
+
+---
+
+## 3. Geographic Spread
+
+Norconsult's DC reference base is **exclusively Norwegian** — no confirmed DC projects in Sweden, Denmark, Finland, or Iceland despite offices in all countries.
+
+## 4. Not Confirmed — Major Norwegian Operators
+
+| Target | Result |
+|---|---|
+| Green Mountain (Rennesøy, Rjukan, Enebakk, Hamar) | No evidence — uses different engineering partners |
+| Lefdal Mine (Måløy) | No evidence — ABB/Hitachi Energy cited |
+| DigiPlex / STACK (Fetsund, Rosenholm) | No evidence |
+| Skygard Oslo | No evidence — COWI confirmed |
+| Sigma2 / UNINETT / HPC | No evidence |
+| Narvik / Nscale / Aker DC | No evidence — HENT building |
+| Statsbygg / government DC | No evidence |
