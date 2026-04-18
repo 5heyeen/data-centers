@@ -245,8 +245,7 @@ Process each subtask in the wave sequentially, regardless of whether it is `[ind
 **For `[independent]` and `[sequential]` subtasks:**
 1. Derive `<task-slug>`, create the task directory
 2. Invoke `/create-prompts` with the subtask description as argument
-3. Save the chain to `workspace\tasks\<nn>-<task-slug>\prompt-chain.md`
-4. Invoke `/run-prompt-chain` with the chain file as argument
+3. Invoke `/run-prompt-chain` with the generated chain passed directly (do not save the chain to disk)
 5. `/run-prompt-chain` handles prompt-level parallelism internally (independent prompts in batches of 3, sequential prompts in order)
 6. **If rate limit error:** wait 60s, retry failed prompt(s) only. Retry up to 3 times (60s → 120s → 240s).
 7. Run **3c. Save Prompt Outputs to Notion** for this subtask.
@@ -260,8 +259,7 @@ For waves containing `[independent]` subtasks, run them concurrently.
 For each sub-wave, spawn one `Agent` per subtask (subagent_type: `general-purpose`). Each agent handles the **full chain → execute → save cycle** for its subtask:
 
 1. Generate its prompt chain via `/create-prompts`
-2. Save the chain to `workspace\tasks\<nn>-<task-slug>\prompt-chain.md`
-3. Execute via `/run-prompt-chain`
+2. Execute via `/run-prompt-chain` with the generated chain passed directly (do not save the chain to disk)
 4. Save outputs to `workspace\tasks\<nn>-<task-slug>\prompts\` and `research.md`
 
 Wait for all agents in the sub-wave to return before starting the next sub-wave. **Save each agent's output to disk immediately when it returns** — do not wait for sibling agents.
@@ -380,7 +378,7 @@ Workspace: <full workspace path>
 Files:
   - 00-scope.md (scope)
   - 01-breakdown.md (subtask breakdown)
-  - tasks/*/ (per-task prompt chains, prompts, and research)
+  - tasks/*/ (per-task prompts and research)
   - synthesis.md (cross-task synthesis)
   - presentation.md (visual + executive brief)
   - diagrams/*.html (interactive visualisations — open in browser)
