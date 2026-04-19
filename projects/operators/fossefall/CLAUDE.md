@@ -23,10 +23,10 @@ Primary Metier services to investigate: Contract & Procurement Strategy, Owner's
 
 ## Research Outputs
 
-All outputs are saved to the `research/` subfolder:
-- `research/01-company.md`
-- `research/02-hiring.md`
-- `research/03-news-ownership.md`
-- `research/04-comparables.md`
-- `research/05-pain-points.md`
-- `research/brief.md` ← final meeting brief
+All outputs are saved directly in this folder:
+- `01-company.md`
+- `02-hiring.md`
+- `03-news-ownership.md`
+- `04-comparables.md`
+- `05-pain-points.md`
+- `brief.md` ← final meeting brief

@@ -5,7 +5,7 @@ Analyze active job postings to understand what capabilities the operator is buil
 
 ## Inputs
 - `operator.md` — company name, legal name
-- `research/01-company.md` — for context on current team
+- `01-company.md` — for context on current team
 
 ## Research Steps
 
@@ -32,7 +32,7 @@ Analyze active job postings to understand what capabilities the operator is buil
    - No job ads for a company with announced projects → either outsourcing everything (strong Metier opportunity) or very early stage
 
 ## Output Format
-Save to `research/02-hiring.md`:
+Save to `02-hiring.md`:
 
 ```
 # Hiring Analysis: {name}

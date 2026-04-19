@@ -5,8 +5,8 @@ Identify operators with similar strategies or profiles, and learn from their cha
 
 ## Inputs
 - `operator.md` — segment, ownership type
-- `research/01-company.md` — strategy
-- `research/03-news-ownership.md` — ownership context
+- `01-company.md` — strategy
+- `03-news-ownership.md` — ownership context
 
 ## Research Steps
 
@@ -37,7 +37,7 @@ Identify operators with similar strategies or profiles, and learn from their cha
    - What did successful comparables do differently?
 
 ## Output Format
-Save to `research/04-comparables.md`:
+Save to `04-comparables.md`:
 
 ```
 # Comparable Operators: {name}

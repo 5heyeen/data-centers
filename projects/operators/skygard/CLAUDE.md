@@ -23,4 +23,4 @@ Primary Metier services to investigate: Contract & Procurement Strategy, Project
 
 ## Research Outputs
 
-All outputs are saved to the `research/` subfolder.
+All outputs are saved directly in this folder.

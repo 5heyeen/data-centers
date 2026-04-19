@@ -5,7 +5,7 @@ Understand the operator's ownership structure, funding situation, investor requi
 
 ## Inputs
 - `operator.md` — ownership type, owner entities, org number, known investor context
-- `research/01-company.md` — company overview
+- `01-company.md` — company overview
 
 ## Research Steps
 
@@ -54,7 +54,7 @@ Understand the operator's ownership structure, funding situation, investor requi
    - Self-funded / corporate balance sheet → fewer external constraints but may lack external discipline; less urgency for structured PM
 
 ## Output Format
-Save to `research/03-news-ownership.md`:
+Save to `03-news-ownership.md`:
 
 ```
 # News, Ownership & Funding Analysis: {name}

@@ -16,4 +16,4 @@ This folder contains research and operator intelligence for Bifrost Edge.
 
 ## Research Outputs
 
-All outputs are saved to the `research/` subfolder.
+All outputs are saved directly in this folder.

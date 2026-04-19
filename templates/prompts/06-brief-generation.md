@@ -5,11 +5,11 @@ Synthesize all research into a concise, actionable meeting brief. This is the fi
 
 ## Inputs
 - `operator.md` — meeting details, contact info
-- `research/01-company.md` — company profile
-- `research/02-hiring.md` — hiring analysis
-- `research/03-news-ownership.md` — ownership and news
-- `research/04-comparables.md` — comparable operators
-- `research/05-pain-points.md` — pain point analysis
+- `01-company.md` — company profile
+- `02-hiring.md` — hiring analysis
+- `03-news-ownership.md` — ownership and news
+- `04-comparables.md` — comparable operators
+- `05-pain-points.md` — pain point analysis
 - `../../projects/dc-gtm/dc-services/dc_services_metier.md` — for service descriptions
 - `../../templates/meeting-brief.md` — output template
 
@@ -44,7 +44,7 @@ Synthesize all research into a concise, actionable meeting brief. This is the fi
 12. **Sources:** All URLs from all research phases.
 
 ## Output
-Save to `research/brief.md` following the template structure in `../../templates/meeting-brief.md`.
+Save to `brief.md` following the template structure in `../../templates/meeting-brief.md`.
 
 ## Quality Checklist
 - [ ] Every claim cites a source

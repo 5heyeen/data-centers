@@ -4,10 +4,10 @@
 Synthesize all research into a structured pain point analysis, mapping each pain point to relevant Metier services. This is the analytical core of the meeting brief — no web research, purely synthesis.
 
 ## Inputs
-- `research/01-company.md` — company profile
-- `research/02-hiring.md` — capability gaps from hiring analysis
-- `research/03-news-ownership.md` — ownership implications and timeline pressure
-- `research/04-comparables.md` — lessons from comparable operators
+- `01-company.md` — company profile
+- `02-hiring.md` — capability gaps from hiring analysis
+- `03-news-ownership.md` — ownership implications and timeline pressure
+- `04-comparables.md` — lessons from comparable operators
 - `../../projects/dc-gtm/dc-services/dc_services_metier.md` — Metier service catalog
 - `../../projects/dc-gtm/dc-services/dc_services_metier_pain_point.md` — decision framework and archetype patterns
 
@@ -39,7 +39,7 @@ Synthesize all research into a structured pain point analysis, mapping each pain
 6. **Flag low-confidence assessments** — clearly separate facts from inferences.
 
 ## Output Format
-Save to `research/05-pain-points.md`:
+Save to `05-pain-points.md`:
 
 ```
 # Pain Point Analysis: {name}

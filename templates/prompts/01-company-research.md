@@ -25,7 +25,7 @@ Build a comprehensive company profile from public sources.
 Search in both Norwegian and English. Many Norwegian company sites and registry data are in Norwegian. Key Norwegian terms: "datasenter", "prosjektleder", "styret" (board), "daglig leder" (CEO), "ansatte" (employees).
 
 ## Output Format
-Save to `research/01-company.md`:
+Save to `01-company.md`:
 
 ```
 # Company Research: {name}
