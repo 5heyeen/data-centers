@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tetra Tech – Metier Alliance Service Map</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: #f0f2f5; padding: 28px 16px; }
+h1 { font-size: 1.3rem; font-weight: 700; color: #111; margin-bottom: 4px; text-align: center; }
+.subtitle { font-size: 0.84rem; color: #666; text-align: center; margin-bottom: 28px; }
+
+.map-container {
+  max-width: 980px; margin: 0 auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: 220px 1fr 220px;
+  gap: 0;
+  align-items: start;
+}
+
+.col-header {
+  text-align: center; font-size: 0.78rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  padding: 6px 10px; border-radius: 6px; margin-bottom: 8px;
+}
+.tt-header { background: #e3f2fd; color: #1565C0; }
+.metier-header { background: #e8f5e9; color: #2E7D32; }
+
+.services-col { display: flex; flex-direction: column; gap: 6px; }
+
+.svc-box {
+  padding: 8px 12px; border-radius: 7px;
+  font-size: 0.77rem; font-weight: 600; line-height: 1.35;
+  border: 2px solid transparent;
+  cursor: default;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.12s;
+  position: relative;
+}
+.svc-box.tt-svc {
+  background: white; color: #1a1a2e;
+  border-color: #bbdefb;
+  text-align: right;
+}
+.svc-box.metier-svc {
+  background: white; color: #1a1a2e;
+  border-color: #c8e6c9;
+  text-align: left;
+}
+.svc-box .evidence {
+  display: block; font-size: 0.67rem; font-weight: 400;
+  color: #999; margin-top: 2px;
+}
+.svc-box.tt-svc .evidence { text-align: right; }
+
+/* Hover highlight states */
+.svc-box.highlighted-comp { border-color: #43A047 !important; box-shadow: 0 0 0 3px rgba(67,160,71,0.18); transform: scale(1.01); }
+.svc-box.highlighted-conflict { border-color: #F57C00 !important; box-shadow: 0 0 0 3px rgba(245,124,0,0.18); transform: scale(1.01); }
+.svc-box.faded { opacity: 0.35; }
+
+/* SVG canvas */
+#svg-canvas {
+  width: 100%; height: 100%;
+  overflow: visible;
+}
+.svg-wrap { position: relative; }
+
+/* Connection paths */
+.conn { fill: none; stroke-width: 2.5; opacity: 0.35; cursor: pointer; transition: opacity 0.15s, stroke-width 0.15s; }
+.conn.comp { stroke: #43A047; stroke-dasharray: none; }
+.conn.conflict { stroke: #F57C00; stroke-dasharray: 6 3; }
+.conn:hover, .conn.active { opacity: 1; stroke-width: 4; }
+
+/* Detail panel */
+.detail-panel {
+  max-width: 980px; margin: 20px auto 0;
+  background: white; border-radius: 10px; padding: 16px 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.09);
+  border-left: 5px solid #ddd;
+  min-height: 68px;
+  transition: border-color 0.2s;
+}
+.detail-panel h3 { font-size: 0.93rem; font-weight: 700; color: #111; margin-bottom: 5px; }
+.detail-panel p { font-size: 0.83rem; color: #555; line-height: 1.6; }
+.detail-badge {
+  display: inline-block; font-size: 0.68rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 2px 8px; border-radius: 10px; margin-bottom: 8px;
+}
+.badge-comp { background: #e8f5e9; color: #2E7D32; }
+.badge-conflict { background: #fff3e0; color: #E65100; }
+
+.legend { display: flex; gap: 24px; flex-wrap: wrap; max-width: 980px; margin: 20px auto 0; justify-content: center; }
+.legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.78rem; color: #555; }
+.legend-line { width: 28px; height: 3px; border-radius: 2px; }
+.legend-line.comp { background: #43A047; }
+.legend-line.conflict { background: #F57C00; border-top: 3px dashed #F57C00; height: 0; margin-top: 0; }
+
+.hint { text-align: center; font-size: 0.76rem; color: #aaa; margin: 16px auto; max-width: 980px; }
+</style>
+</head>
+<body>
+
+<h1>Tetra Tech – Metier Alliance Service Map</h1>
+<p class="subtitle">Hover connections to see alliance angles · Green = complementary · Orange = conflict zone requiring scope boundary</p>
+
+<div class="map-container" id="map-container">
+
+  <!-- Left: Tetra Tech -->
+  <div>
+    <div class="col-header tt-header">Tetra Tech DC Services</div>
+    <div class="services-col" id="tt-col">
+      <div class="svc-box tt-svc" data-id="tt0">Power &amp; Energy Engineering<span class="evidence">Strong — core competency</span></div>
+      <div class="svc-box tt-svc" data-id="tt1">Cooling Engineering<span class="evidence">Medium-strong — DTC/liquid</span></div>
+      <div class="svc-box tt-svc" data-id="tt2">Water Management<span class="evidence">Strongest — primary identity</span></div>
+      <div class="svc-box tt-svc" data-id="tt3">Sustainability &amp; ESG<span class="evidence">Strong — CSRD/EU EED</span></div>
+      <div class="svc-box tt-svc" data-id="tt4">Commissioning (Cx/IST)<span class="evidence">Medium-strong — Convergence Ctrl</span></div>
+      <div class="svc-box tt-svc" data-id="tt5">Planning &amp; Permitting<span class="evidence">Strong — via RPS Europe</span></div>
+      <div class="svc-box tt-svc" data-id="tt6">Feasibility &amp; Due Diligence<span class="evidence">Medium — stated; no project refs</span></div>
+      <div class="svc-box tt-svc" data-id="tt7">Digital Engineering<span class="evidence">Medium — CFD, digital twins</span></div>
+    </div>
+  </div>
+
+  <!-- Centre: SVG connections -->
+  <div class="svg-wrap" id="svg-wrap">
+    <svg id="svg-canvas" xmlns="http://www.w3.org/2000/svg"></svg>
+  </div>
+
+  <!-- Right: Metier -->
+  <div>
+    <div class="col-header metier-header">Metier DC Services</div>
+    <div class="services-col" id="metier-col">
+      <div class="svc-box metier-svc" data-id="m0">Contract &amp; Procurement<span class="evidence">Tendering, supplier qualification</span></div>
+      <div class="svc-box metier-svc" data-id="m1">Project Execution &amp; PM<span class="evidence">PM, cost control, scheduling</span></div>
+      <div class="svc-box metier-svc" data-id="m2">Early-Phase Advisory<span class="evidence">Pre-FEED, concept selection, VPU</span></div>
+      <div class="svc-box metier-svc" data-id="m3">Owner's Engineer / PMC<span class="evidence">Technical rep, contractor oversight</span></div>
+      <div class="svc-box metier-svc" data-id="m4">Portfolio Governance<span class="evidence">Stage-gate, investor reporting</span></div>
+      <div class="svc-box metier-svc" data-id="m5">Strategy &amp; Biz Dev Advisory<span class="evidence">Market positioning, org design</span></div>
+      <div class="svc-box metier-svc" data-id="m6">Training / Metier Academy<span class="evidence">16,000 participants/year</span></div>
+      <div class="svc-box metier-svc" data-id="m7">Digital Advisory<span class="evidence">DCIM, BIM, IT architecture</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="detail-panel" id="detail-panel">
+  <h3 id="dp-title">Hover a connection line to see the alliance angle</h3>
+  <p id="dp-body">Green lines show complementary opportunities where Tetra Tech and Metier are additive. Orange dashed lines show overlap zones requiring explicit scope boundaries.</p>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-line comp"></div> Complementary — additive value, low conflict</div>
+  <div class="legend-item"><div class="legend-line conflict"></div> Overlap — requires explicit scope boundary</div>
+</div>
+
+<p class="hint">Click a connection to lock the highlight · Click again to release</p>
+
+<script>
+// Connections: [tt_index, metier_index, type, title, description]
+const connections = [
+  [0, 0, 'comp', 'Long-Lead Equipment: Spec + Procurement',
+    'Tetra Tech specifies power equipment (generators, UPS, switchgear, transformers). Metier manages how to procure it — tendering, supplier qualification, contract strategy. Natural handoff with zero overlap.'],
+  [1, 1, 'comp', 'Commissioning Schedule + IT Go-Live Interface',
+    'Tetra Tech runs technical IST/FAT/SAT testing. Metier manages commissioning schedule and interfaces with the client\'s IT go-live timeline. Complementary without conflict on who owns what.'],
+  [2, 1, 'comp', 'Water Treatment Scope within PM Framework',
+    'Tetra Tech designs and delivers water treatment/ZLD systems. Metier\'s project execution layer manages schedule, cost control, and progress reporting. Technical sub-consultant model works cleanly here.'],
+  [3, 4, 'comp', 'ESG Numbers + Governance Infrastructure',
+    'Tetra Tech produces the ESG metrics: PUE/WUE modeling, carbon reporting, CSRD compliance data. Metier builds the governance framework and investor reporting infrastructure to present those numbers. End-to-end ESG without overlap.'],
+  [4, 1, 'comp', 'Independent Cx + Project Controls',
+    'Tetra Tech runs independent commissioning (CxA role, Level 1–5 IST). Metier manages the overall schedule, cost control, and progress interface. Both operating in their lane — technical testing vs. project management.'],
+  [5, 0, 'comp', 'Permitting Shapes Procurement Strategy',
+    'Tetra Tech handles environmental permitting, NVE concession applications, EIA. Metier\'s procurement strategy is informed by permitting timelines — critical path alignment. Together they cover the full pre-FEED risk picture.'],
+  [6, 2, 'comp', 'Technical Feasibility + Investment Decision Framework',
+    'Tetra Tech delivers the engineering feasibility: grid capacity, site risk, power availability. Metier layers on the decision framework for the investor or board: VPU, concept selection, PDRI scoring. Tetra Tech answers "can we build here?" — Metier answers "should we build here, and at what cost?"'],
+  [6, 2, 'conflict', 'Overlap Zone: Pre-Investment Advisory',
+    'CONFLICT ZONE: Both firms engage in pre-investment advisory. Risk of scope conflict over who "leads" the front-end engagement. Mitigation: define clearly that Tetra Tech provides technical inputs only; Metier holds the client advisory relationship.'],
+  [6, 3, 'conflict', 'Overlap Zone: Owner\'s Engineering Role',
+    'CONFLICT ZONE (most sensitive): Tetra Tech sometimes positions as "owner\'s technical advisor" in feasibility and commissioning. Metier\'s Owner\'s Engineer / PMC mandate is its core commercial offering. If Tetra Tech pitches OE role, it directly competes. Mitigation: Metier always holds OE/PMC; Tetra Tech is always a named technical sub-consultant, never the client-facing advisor.'],
+  [7, 7, 'conflict', 'Overlap Zone: Digital PM Tooling',
+    'CONFLICT ZONE: Tetra Tech\'s myProjects platform is a PM information management tool. Metier\'s Digital Advisory includes IT/solution architecture and digital PM advisory. The tools may compete or create confusion about who owns the digital PM layer. Mitigation: define a clear tool boundary — myProjects for Tetra Tech\'s internal delivery tracking; Metier owns the client-facing digital PM advisory.'],
+];
+
+const ttBoxes = Array.from(document.getElementById('tt-col').querySelectorAll('.svc-box'));
+const metierBoxes = Array.from(document.getElementById('metier-col').querySelectorAll('.svc-box'));
+const svgWrap = document.getElementById('svg-wrap');
+const svg = document.getElementById('svg-canvas');
+const dpTitle = document.getElementById('dp-title');
+const dpBody = document.getElementById('dp-body');
+const detailPanel = document.getElementById('detail-panel');
+
+let locked = null;
+
+function getBoxCenter(el, side) {
+  const wrapRect = svgWrap.getBoundingClientRect();
+  const rect = el.getBoundingClientRect();
+  const y = rect.top + rect.height / 2 - wrapRect.top;
+  const x = side === 'right' ? rect.right - wrapRect.left : rect.left - wrapRect.left;
+  return { x, y };
+}
+
+function buildSVG() {
+  const wrapRect = svgWrap.getBoundingClientRect();
+  svg.setAttribute('viewBox', `0 0 ${wrapRect.width} ${wrapRect.height}`);
+  svg.setAttribute('width', wrapRect.width);
+  svg.setAttribute('height', wrapRect.height);
+  svg.innerHTML = '';
+
+  connections.forEach((conn, idx) => {
+    const [ti, mi, type, title, desc] = conn;
+    const ttEl = ttBoxes[ti];
+    const mEl = metierBoxes[mi];
+    if (!ttEl || !mEl) return;
+
+    const from = getBoxCenter(ttEl, 'right');
+    const to = getBoxCenter(mEl, 'left');
+    const cx = wrapRect.width / 2;
+    const d = `M ${from.x} ${from.y} C ${cx} ${from.y}, ${cx} ${to.y}, ${to.x} ${to.y}`;
+
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', d);
+    path.setAttribute('class', `conn ${type}`);
+    path.setAttribute('data-idx', idx);
+    if (type === 'conflict') path.setAttribute('stroke-dasharray', '7 4');
+
+    path.addEventListener('mouseenter', () => { if (!locked) activate(idx, type, title, desc); });
+    path.addEventListener('mouseleave', () => { if (!locked) deactivate(); });
+    path.addEventListener('click', () => {
+      if (locked === idx) { locked = null; deactivate(); }
+      else { locked = idx; activate(idx, type, title, desc); }
+    });
+
+    svg.appendChild(path);
+  });
+}
+
+function activate(idx, type, title, desc) {
+  // Fade all paths, highlight this one
+  svg.querySelectorAll('.conn').forEach(p => p.classList.remove('active'));
+  svg.querySelectorAll(`.conn[data-idx="${idx}"]`).forEach(p => p.classList.add('active'));
+
+  // Highlight relevant service boxes
+  const conn = connections[idx];
+  ttBoxes.forEach((b, i) => {
+    b.classList.remove('highlighted-comp', 'highlighted-conflict', 'faded');
+    if (i === conn[0]) b.classList.add(type === 'comp' ? 'highlighted-comp' : 'highlighted-conflict');
+    else b.classList.add('faded');
+  });
+  metierBoxes.forEach((b, i) => {
+    b.classList.remove('highlighted-comp', 'highlighted-conflict', 'faded');
+    if (i === conn[1]) b.classList.add(type === 'comp' ? 'highlighted-comp' : 'highlighted-conflict');
+    else b.classList.add('faded');
+  });
+
+  // Update detail panel
+  const badgeClass = type === 'comp' ? 'badge-comp' : 'badge-conflict';
+  const badgeText = type === 'comp' ? 'Alliance Opportunity' : 'Conflict Zone';
+  dpTitle.innerHTML = `<span class="detail-badge ${badgeClass}">${badgeText}</span><br>${title}`;
+  dpBody.textContent = desc;
+  detailPanel.style.borderLeftColor = type === 'comp' ? '#43A047' : '#F57C00';
+}
+
+function deactivate() {
+  svg.querySelectorAll('.conn').forEach(p => p.classList.remove('active'));
+  ttBoxes.forEach(b => b.classList.remove('highlighted-comp', 'highlighted-conflict', 'faded'));
+  metierBoxes.forEach(b => b.classList.remove('highlighted-comp', 'highlighted-conflict', 'faded'));
+  dpTitle.textContent = 'Hover a connection line to see the alliance angle';
+  dpBody.textContent = 'Green lines show complementary opportunities where Tetra Tech and Metier are additive. Orange dashed lines show overlap zones requiring explicit scope boundaries.';
+  detailPanel.style.borderLeftColor = '#ddd';
+}
+
+// Build after layout is painted
+window.addEventListener('load', () => {
+  buildSVG();
+  window.addEventListener('resize', buildSVG);
+});
+</script>
+</body>
+</html>

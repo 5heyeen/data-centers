@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metier Ownership Timeline</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: #f0f2f5; padding: 32px 24px; min-height: 100vh; }
+.header { max-width: 900px; margin: 0 auto 40px; }
+h1 { font-size: 1.35rem; font-weight: 700; color: #111; margin-bottom: 6px; }
+.subtitle { font-size: 0.88rem; color: #666; }
+
+.timeline-wrap { max-width: 900px; margin: 0 auto; position: relative; padding: 0 20px; }
+
+/* Era label strip */
+.era-strip { display: flex; height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 60px; }
+.era-seg { flex: 1; }
+.era-founded { background: #9e9e9e; flex: 1; }
+.era-rps { background: #2196F3; flex: 2; }
+.era-tt { background: #FF6B35; flex: 1; }
+.era-nc { background: #43A047; flex: 0.5; }
+
+/* Timeline track */
+.track { position: relative; display: flex; justify-content: space-between; align-items: flex-start; }
+.track::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 0; right: 0;
+  height: 3px;
+  background: #ddd;
+  z-index: 0;
+}
+
+.event { display: flex; flex-direction: column; align-items: center; cursor: pointer; z-index: 1; flex: 1; padding: 0 4px; }
+.dot {
+  width: 28px; height: 28px; border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  flex-shrink: 0;
+}
+.event:hover .dot { transform: scale(1.3); box-shadow: 0 4px 16px rgba(0,0,0,0.35); }
+.year { font-weight: 700; font-size: 0.9rem; color: #111; margin-top: 10px; }
+.elabel { font-size: 0.72rem; color: #555; text-align: center; margin-top: 3px; max-width: 80px; line-height: 1.35; }
+
+/* Detail panel */
+.detail-panel {
+  max-width: 900px; margin: 40px auto 0;
+  background: white; border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  border-left: 5px solid #ccc;
+  transition: border-color 0.2s;
+  min-height: 80px;
+}
+.detail-panel h3 { font-size: 1rem; font-weight: 700; color: #111; margin-bottom: 8px; }
+.detail-panel p { font-size: 0.88rem; color: #444; line-height: 1.65; }
+.detail-panel .amount { font-weight: 700; color: #333; }
+.detail-panel .implication { margin-top: 10px; font-size: 0.82rem; color: #888; font-style: italic; }
+
+/* Legend */
+.legend { display: flex; gap: 20px; flex-wrap: wrap; max-width: 900px; margin: 32px auto 0; }
+.legend-item { display: flex; align-items: center; gap: 7px; font-size: 0.78rem; color: #555; }
+.legend-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+
+.hint { max-width: 900px; margin: 24px auto 0; font-size: 0.78rem; color: #999; text-align: center; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Metier Ownership Timeline</h1>
+  <p class="subtitle">1976 → 2025 — Click any event to see details and alliance implications</p>
+</div>
+
+<div class="timeline-wrap">
+  <div class="era-strip">
+    <div class="era-seg era-founded"></div>
+    <div class="era-seg era-rps"></div>
+    <div class="era-seg era-tt"></div>
+    <div class="era-seg era-nc"></div>
+  </div>
+  <div class="track" id="track"></div>
+</div>
+
+<div class="detail-panel" id="detail-panel">
+  <h3 id="detail-title">Select an event</h3>
+  <p id="detail-body">Click any milestone above to see details and alliance implications.</p>
+  <p class="implication" id="detail-impl"></p>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#9e9e9e"></div>Independent (pre-sale)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#2196F3"></div>RPS Group ownership</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#FF6B35"></div>Tetra Tech ownership (via RPS)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#43A047"></div>Norconsult ASA ownership</div>
+</div>
+
+<p class="hint">Hover to highlight · Click to expand details</p>
+
+<script>
+const events = [
+  {
+    year: 1976,
+    label: "Metier\nfounded",
+    color: "#9e9e9e",
+    title: "1976 — Metier AS Founded",
+    body: "Metier established in Oslo as a project management consultancy. Over 40 years it built the leading Norwegian PM advisory brand, developing proprietary methodologies and training programmes. Core product: PM capability building, not engineering design.",
+    impl: "Alliance relevance: Metier's market trust is decades-built. Tetra Tech cannot replicate this from London or Columbus."
+  },
+  {
+    year: 2013,
+    label: "RPS enters\nNorway",
+    color: "#64B5F6",
+    title: "November 2013 — RPS Acquires OEC Group (Norway)",
+    body: "UK-listed RPS Group makes first Norwegian acquisition: the OEC Group, an energy and environmental consultancy. This established RPS's initial Norwegian footprint in oil & gas project management and environmental services.",
+    impl: "Alliance relevance: RPS Norway was never a DC practice. Its heritage was O&G and environmental — not mission-critical engineering."
+  },
+  {
+    year: 2015,
+    label: "RPS buys\nMetier",
+    color: "#2196F3",
+    title: "April 2015 — RPS Acquires Metier Holding AS (NOK 267M)",
+    body: "RPS acquired Metier Holding AS for NOK 267M (~£22.3M). At acquisition: 160 employees across Oslo, Stavanger, Trondheim, Alesund. ~52% held by external investors, ~48% by 64 Metier staff. RPS positioned combined entity as 'the leading project management organisation in Norway.'",
+    impl: "Alliance relevance: The NOK 267M entry price vs. NOK 475M exit price (2025) shows Metier's value was well understood by sophisticated buyers."
+  },
+  {
+    year: 2023,
+    label: "Tetra Tech\ninherits",
+    color: "#FF6B35",
+    title: "January 2023 — Tetra Tech Acquires RPS Group ($691M)",
+    body: "Tetra Tech acquired all of RPS Group for $691M. Metier — then ~250 employees with NOK 494M revenue — was inherited through 'Tetra Tech RPS Energy Limited.' During the 2-year overlap (Jan 2023–Dec 2025): no joint DC projects, no co-branded activity, no operational integration. Metier operated as a standalone brand throughout.",
+    impl: "Alliance relevance: Tetra Tech never built an organic relationship with Metier. Any future alliance must be built from scratch — but shared ownership history provides a genuine conversation opener."
+  },
+  {
+    year: 2025,
+    label: "Norconsult\nacquires",
+    color: "#43A047",
+    title: "December 2025 — Norconsult ASA Acquires Metier (NOK 475M)",
+    body: "Norconsult ASA acquired 100% of Metier Group AS from Tetra Tech RPS Energy Limited at NOK 475M (enterprise value NOK 480M announced Nov 2025). A 77% premium over the NOK 267M RPS paid in 2015. Clean exit: no non-compete, no preferred supplier arrangement, no residual commercial ties.",
+    impl: "Alliance relevance: All ties severed. A Tetra Tech–Metier commercial arrangement today requires fresh negotiation. Anything exclusive needs Norconsult approval. Start with Model A: project-by-project subcontracting, no exclusivity required."
+  }
+];
+
+const track = document.getElementById('track');
+const panel = document.getElementById('detail-panel');
+const detailTitle = document.getElementById('detail-title');
+const detailBody = document.getElementById('detail-body');
+const detailImpl = document.getElementById('detail-impl');
+
+const borderColors = { "#9e9e9e": "#9e9e9e", "#64B5F6": "#2196F3", "#2196F3": "#2196F3", "#FF6B35": "#FF6B35", "#43A047": "#43A047" };
+
+events.forEach((e, i) => {
+  const div = document.createElement('div');
+  div.className = 'event';
+  div.innerHTML = `<div class="dot" style="background:${e.color}"></div><div class="year">${e.year}</div><div class="elabel">${e.label.replace('\n','<br>')}</div>`;
+  div.addEventListener('click', () => {
+    detailTitle.textContent = e.title;
+    detailBody.textContent = e.body;
+    detailImpl.textContent = e.impl;
+    panel.style.borderLeftColor = e.color;
+    // highlight selected
+    document.querySelectorAll('.event .dot').forEach(d => d.style.opacity = '0.5');
+    div.querySelector('.dot').style.opacity = '1';
+  });
+  track.appendChild(div);
+});
+</script>
+</body>
+</html>
