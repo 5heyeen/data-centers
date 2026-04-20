@@ -11,11 +11,10 @@ Expects structured input with these parameters (passed as key-value pairs or inf
 | Parameter | Required | Description |
 |-----------|----------|-------------|
 | `content` | Yes | The research content to save (markdown string) |
-| `title` | Yes | Title for the Document Library entry (e.g. `[Research] AI in Consulting` or `[Prompt] market-drivers — ai-consulting`) |
-| `workspace_path` | Yes | Local workspace directory (e.g. `C:\Users\shelie\.claude\projects\skygard\research\ai-consulting\`) |
+| `title` | Yes | Title for the Document Library entry. Format: `Hospital · NN · Topic` (e.g. `Kai Tak · 01 · Project Overview`, `Royal Adelaide · 07 · Cost Performance`) |
+| `workspace_path` | Yes | Local workspace directory (e.g. `projects/skygard/research/ai-consulting/`) |
 | `local_filename` | Yes | Filename for local save (e.g. `synthesis.md` or `prompts/01-market-drivers.md`) |
 | `project_page_url` | Yes | Notion URL of the matched Metier project page |
-| `topic` | No | One or more Topic tags for the Document Library entry. Valid values: `"Contract Strategy"`, `"Project Management"`, `"Contract"`, `"Market Strategy"`, `"Competitive Analysis"`, `"Commercial Strategy"`, `"Regulation"`, `"Risk Management"`, `"Supply Chain"`, `"Research"`. Infer from content if not provided (e.g. synthesis → `["Research"]`, competitor research → `["Competitive Analysis", "Research"]`). |
 | `prompt_text` | No | If saving a prompt output, the original prompt text (will be rendered as a callout block) |
 
 If any required parameter is missing, check the conversation context. If still missing, ask the user.
@@ -57,17 +56,11 @@ If any step fails (project page not found, no Data & Research section, no Docume
 
 Use `mcp__claude_ai_Notion__notion-create-pages` to create an entry in the Document Library:
 
-- **Parent:** `data_source_id` from the Document Library (extracted in Step 3) — pass as `{"type": "data_source_id", "data_source_id": "<id>"}`. **Never use `page_id` here** — that creates a child page instead of a database entry.
+- **Parent:** `data_source_id` from the Document Library (extracted in Step 3)
 - **Properties:**
-  - `Name`: the `title` parameter
-  - `Source`: `["Claude"]` (multi-select array — always set, never omit)
-  - `Topic`: the `topic` parameter as a JSON array (e.g. `["Competitive Analysis", "Research"]`). If `topic` was not provided, infer it from the content type:
-    - Synthesis or executive brief → `["Research"]`
-    - Competitor/market analysis → `["Competitive Analysis", "Research"]`
-    - Contract or procurement content → `["Contract Strategy", "Research"]`
-    - Regulatory content → `["Regulation", "Research"]`
-    - Risk content → `["Risk Management", "Research"]`
-    - GTM or commercial content → `["Market Strategy", "Research"]`
+  - `Name`: the `title` parameter (format: `Hospital · NN · Topic`)
+  - `Source`: `["Claude"]` (multi-select)
+  - `Status`: `"To Read"` (select)
 - **Content:** The research content in markdown
 
 If `prompt_text` is provided, format the Notion page body as:
@@ -102,4 +95,5 @@ Tell the caller (the orchestrator or user):
 - **Degrade gracefully on Notion failures.** Local save is the priority — Notion is secondary.
 - **Do not ask the user for the Notion location.** The `project_page_url` is passed by the orchestrator; the skill navigates from there to the Document Library automatically.
 - **Source is always `Claude`.** Do not change or omit this.
+- **Status is always `To Read`.** Do not change or omit this.
 - **The callout format with 📎 is mandatory** when `prompt_text` is provided — it's how users distinguish prompt-driven research entries from manual entries in the Document Library.

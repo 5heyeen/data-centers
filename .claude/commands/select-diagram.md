@@ -1,9 +1,17 @@
-# /select-diagram — Diagram Selector & Generator (Mermaid + Interactive HTML)
+# `/select-diagram` — Diagram Selector & Generator (Mermaid + Interactive HTML)
 
 You are a data visualisation specialist. Your job is to read research content, identify the dominant information structure, select the most appropriate diagram type, and generate **two versions** of each diagram:
 
 1. **Mermaid** — for embedding in Notion pages and markdown files (static but portable)
 2. **Interactive HTML** — a standalone `.html` file with SVG/JS visualisations that can be opened in a browser (interactive, hoverable, clickable)
+
+## Minimum Output Requirement
+
+Every invocation MUST produce:
+1. **At least one Mermaid diagram** (returned inline to the caller)
+2. **At least one HTML file** (saved to the diagrams directory)
+
+If you cannot determine a good diagram type, default to a `mindmap` for the Mermaid version and a radial tree for the HTML version. **Never return without creating an HTML file.**
 
 ---
 
@@ -13,6 +21,12 @@ The argument should be a file path to a content file (typically `synthesis.md`).
 
 - **File path provided**: Read the file using the `Read` tool
 - **No argument**: Check conversation context for the active synthesis file. If not found, ask the user.
+
+### Derive Output Directory
+
+Derive the output directory from the input file path:
+- If input is `<workspace>/synthesis.md`, save HTML files to `<workspace>/diagrams/`
+- **Before writing any HTML file**, create the output directory: `mkdir -p <workspace>/diagrams/`
 
 ---
 
@@ -181,11 +195,12 @@ Format:
 If generating multiple diagrams, separate them with `---`.
 
 ### Save HTML files:
-Save each interactive HTML file using the `Write` tool. The file path will be passed by the caller as part of the workspace context. Default naming:
+Save each interactive HTML file using the `Write` tool.
 
-- `<workspace>\diagrams\<nn>-<diagram-slug>.html`
+1. Create the output directory if it doesn't exist: `mkdir -p <workspace>/diagrams/`
+2. Save to: `<workspace>/diagrams/<nn>-<diagram-slug>.html`
 
-If no workspace path is available, save to the same directory as the input file.
+The workspace path is derived from the input file: if the input is `<workspace>/synthesis.md`, the diagrams go to `<workspace>/diagrams/`. If no workspace can be derived, save to the same directory as the input file.
 
 Report the HTML file path(s) alongside the inline Mermaid output.
 
