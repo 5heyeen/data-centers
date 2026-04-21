@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DC Operator Buying Journey Map</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 30px;
+      color: #222;
+    }
+
+    .page {
+      background: white;
+      max-width: 1480px;
+      margin: 0 auto;
+      padding: 44px 40px 36px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
+
+    h1 { font-size: 30px; font-weight: bold; margin-bottom: 3px; }
+    .subtitle { font-size: 14px; font-style: italic; color: #888; margin-bottom: 32px; }
+
+    /* ─── EXTERNAL TRIGGERS ROW ─── */
+    .triggers-row {
+      display: flex;
+      gap: 0;
+      margin-left: 92px;
+      margin-right: 92px;
+      margin-bottom: 0;
+    }
+
+    .trigger-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 5px;
+    }
+
+    .trigger-box {
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      padding: 7px 8px;
+      font-size: 11px;
+      text-align: center;
+      background: #fdfdfd;
+      line-height: 1.4;
+      width: 100%;
+      color: #333;
+    }
+
+    .trigger-stem {
+      width: 1px;
+      height: 16px;
+      background: #999;
+    }
+
+    .trigger-tip {
+      width: 0; height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 7px solid #999;
+    }
+
+    /* ─── STAGES ROW ─── */
+    .stages-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .bubble {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      background: #1a3a6e;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 13px;
+      text-align: center;
+      flex-shrink: 0;
+      line-height: 1.3;
+    }
+
+    .bubble.fid { font-size: 12px; }
+
+    .chevron {
+      flex: 0 0 22px;
+      text-align: center;
+      font-size: 20px;
+      color: #888;
+    }
+
+    .stage-box {
+      flex: 1;
+      background: #e85d26;
+      color: white;
+      padding: 15px 10px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 6px;
+      min-height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.35;
+    }
+
+    /* ─── ACTIVITIES ─── */
+    .activities-area {
+      display: flex;
+      gap: 0;
+      margin-left: 92px;
+      margin-right: 92px;
+    }
+
+    .col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 6px;
+      border-right: 1px dashed #e0e0e0;
+    }
+    .col:last-child { border-right: none; }
+
+    .act {
+      width: 100%;
+      padding: 9px 10px;
+      border-radius: 5px;
+      font-size: 11.5px;
+      text-align: center;
+      line-height: 1.45;
+      border: 1px solid;
+    }
+
+    .act.normal   { background: #eef2fc; border-color: #b0bce8; color: #333; }
+    .act.trigger  { background: #fff3e0; border-color: #ffa726; color: #5d3000; }
+    .act.metier   { background: #e3f2fd; border-color: #4fa0e0; color: #0d3060; font-weight: bold; }
+    .act.blocker  { background: #fce4ec; border-color: #e8809a; color: #7b0030; font-style: italic; }
+    .act.loop     { background: #f1f8e9; border-color: #9fc96a; color: #2e5900; }
+
+    .act-arrow { color: #bbb; font-size: 14px; line-height: 1; margin: 2px 0; }
+
+    /* ─── FEEDBACK LOOPS ─── */
+    .loops-section {
+      background: #fafafa;
+      border: 1px solid #e4e4e4;
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 24px;
+    }
+
+    .loops-section h3 {
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #666;
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+
+    .loop-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .loop-item {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 8px 12px;
+      font-size: 12px;
+      color: #444;
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      flex: 1 1 280px;
+    }
+
+    .loop-icon { color: #e85d26; font-weight: bold; font-size: 15px; flex-shrink: 0; }
+
+    /* ─── BUYING GROUP ─── */
+    .buying-group {
+      margin-top: 24px;
+    }
+
+    .buying-group h3 {
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #666;
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+
+    .bg-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+
+    .bg-table th {
+      background: #f5f5f5;
+      border: 1px solid #e0e0e0;
+      padding: 8px 10px;
+      text-align: left;
+      font-weight: bold;
+      color: #444;
+      font-size: 11.5px;
+    }
+
+    .bg-table td {
+      border: 1px solid #e8e8e8;
+      padding: 8px 10px;
+      vertical-align: top;
+      color: #444;
+      line-height: 1.45;
+    }
+
+    .bg-table tr:nth-child(even) td { background: #fafafa; }
+
+    /* ─── ARCHETYPES ─── */
+    .archetypes {
+      margin-top: 24px;
+    }
+
+    .archetypes h3 {
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #666;
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+
+    .archetype-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .archetype-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 14px;
+      background: #fdfdfd;
+    }
+
+    .archetype-card h4 {
+      font-size: 13px;
+      font-weight: bold;
+      color: #1a3a6e;
+      margin-bottom: 6px;
+    }
+
+    .archetype-card .entry {
+      font-size: 11px;
+      background: #fff3e0;
+      border: 1px solid #ffa726;
+      border-radius: 3px;
+      padding: 4px 7px;
+      display: inline-block;
+      margin-bottom: 6px;
+      color: #5d3000;
+    }
+
+    .archetype-card p {
+      font-size: 11.5px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .archetype-card .pain {
+      font-size: 11px;
+      color: #880030;
+      font-style: italic;
+      margin-top: 5px;
+    }
+
+    /* ─── LEGEND ─── */
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid #ebebeb;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #444;
+    }
+
+    .swatch {
+      width: 26px;
+      height: 16px;
+      border-radius: 3px;
+      border: 1px solid;
+      flex-shrink: 0;
+    }
+
+    .source {
+      margin-top: 18px;
+      font-size: 10px;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <h1>DC Operator Buying Journey</h1>
+  <p class="subtitle">Illustrative — Norwegian data center operators &amp; developers, 2024–2026</p>
+
+  <!-- External triggers -->
+  <div class="triggers-row">
+    <div class="trigger-col">
+      <div class="trigger-box">New CEO /<br>Board Mandate</div>
+      <div class="trigger-stem"></div><div class="trigger-tip"></div>
+    </div>
+    <div class="trigger-col">
+      <div class="trigger-box">Anchor Tenant<br>Signs LOI</div>
+      <div class="trigger-stem"></div><div class="trigger-tip"></div>
+    </div>
+    <div class="trigger-col">
+      <div class="trigger-box">Statnett Grid<br>Approval / Delay</div>
+      <div class="trigger-stem"></div><div class="trigger-tip"></div>
+    </div>
+    <div class="trigger-col">
+      <div class="trigger-box">Budget Cut /<br>Capital Review Board</div>
+      <div class="trigger-stem"></div><div class="trigger-tip"></div>
+    </div>
+    <div class="trigger-col">
+      <div class="trigger-box">PE / Investor<br>IRR Review</div>
+      <div class="trigger-stem"></div><div class="trigger-tip"></div>
+    </div>
+    <div class="trigger-col">
+      <div class="trigger-box">Technical Team<br>Input / Hiring Signal</div>
+      <div class="trigger-stem"></div><div class="trigger-tip"></div>
+    </div>
+  </div>
+
+  <!-- Stage headers -->
+  <div class="stages-row">
+    <div class="bubble">Start</div>
+    <div class="chevron">›</div>
+    <div class="stage-box">Opportunity<br>Recognition</div>
+    <div class="chevron">›</div>
+    <div class="stage-box">Strategy &amp;<br>Feasibility</div>
+    <div class="chevron">›</div>
+    <div class="stage-box">Requirements &amp;<br>Delivery Model</div>
+    <div class="chevron">›</div>
+    <div class="stage-box">Partner &amp;<br>Contractor Selection</div>
+    <div class="chevron">›</div>
+    <div class="bubble fid">FID &amp;<br>Delivery</div>
+  </div>
+
+  <!-- Activity columns -->
+  <div class="activities-area">
+
+    <!-- Stage 1: Opportunity Recognition -->
+    <div class="col">
+      <div class="act trigger">Power asset, land or<br>grid access identified</div>
+      <div class="act-arrow">↓</div>
+      <div class="act normal">DCD / industry events<br>&amp; web search</div>
+      <div class="act-arrow">↓</div>
+      <div class="act normal">PE investment thesis:<br>DC market attractiveness</div>
+      <div class="act-arrow">↓</div>
+      <div class="act normal">Peer conversations &amp;<br>comparable deal review</div>
+      <div class="act-arrow">↓</div>
+      <div class="act blocker">Misalignment on<br>target market segment</div>
+      <div class="act-arrow">↓</div>
+      <div class="act normal">Market report /<br>white paper download</div>
+      <div class="act-arrow">↓</div>
+      <div class="act normal">proff.no / brreg.no:<br>competitor ownership scan</div>
+    </div>
+
+    <!-- Stage 2: Strategy & Feasibility -->
+    <div class="col">
+      <div class="act trigger">Initial site &amp;<br>power assessment</div>
+      <div class="act-arrow">↓</div>
+      <div class="act normal">Business case &amp;<br>financial modeling (IRR)</div>
+      <div class="act-arrow">↓</div>
+      <div class="act metier">Early-phase advisory<br>engagement → Metier</div>
+      <div class="act-arrow">↓</div>
+      <div class="act normal">Segment decision:<br>colo / HPC / sovereign / edge</div>
+      <div class="act-arrow">↓</div>
+      <div class="act loop">Feasibility review:<br>return to concept?</div>
+      <div class="act-arrow">↓</div>
+      <div class="act normal">Board / IC alignment<br>discussion</div>
+      <div class="act-arrow">↓</div>
+      <div class="act blocker">Misalignment on<br>financial model / IRR target</div>
+    </div>
+
+    <!-- Stage 3: Requirements & Delivery Model -->
+    <div class="col">
+      <div class="act trigger">OPR &amp; Basis of Design<br>development started</div>
+      <div class="act-arrow">↓</div>
+      <div class="act metier">Delivery model selection<br>(EPC / EPCM / Design-Build)</div>
+      <div class="act-arrow">↓</div>
+      <div class="act metier">Contract &amp; procurement<br>strategy defined → Metier</div>
+      <div class="act-arrow">↓</div>
+      <div class="act normal">Permitting &amp; regulatory<br>assessment (KU / T-1442)</div>
+      <div class="act-arrow">↓</div>
+      <div class="act normal">Lender's technical<br>advisor engaged</div>
+      <div class="act-arrow">↓</div>
+      <div class="act loop">Grid connection flag:<br>12–18 month lead time</div>
+      <div class="act-arrow">↓</div>
+      <div class="act normal">Supplier case studies &amp;<br>online content reviewed</div>
+    </div>
+
+    <!-- Stage 4: Partner & Contractor Selection -->
+    <div class="col">
+      <div class="act trigger">EPCM / Owner's Engineer<br>RFP issued</div>
+      <div class="act-arrow">↓</div>
+      <div class="act normal">Contractor scoring &amp;<br>RFP response comparison</div>
+      <div class="act-arrow">↓</div>
+      <div class="act normal">Live supplier demos /<br>reference site visits</div>
+      <div class="act-arrow">↓</div>
+      <div class="act blocker">Legal flag /<br>security clearance check</div>
+      <div class="act-arrow">↓</div>
+      <div class="act metier">Investment Committee /<br>Board approval → Metier IC pack</div>
+      <div class="act-arrow">↓</div>
+      <div class="act normal">Investor due diligence<br>(FID readiness package)</div>
+      <div class="act-arrow">↓</div>
+      <div class="act loop">More information<br>needed from advisory team</div>
+    </div>
+
+  </div>
+
+  <!-- Non-linear feedback loops -->
+  <div class="loops-section">
+    <h3>Non-linear feedback loops &amp; re-entry points</h3>
+    <div class="loop-grid">
+      <div class="loop-item">
+        <span class="loop-icon">↩</span>
+        <span>Feasibility rejected → return to Opportunity Recognition; re-scope segment, site, or power assumption</span>
+      </div>
+      <div class="loop-item">
+        <span class="loop-icon">↩</span>
+        <span>Grid connection delay (Statnett queue) → process pauses at Requirements; restarts 12–18 months later</span>
+      </div>
+      <div class="loop-item">
+        <span class="loop-icon">↩</span>
+        <span>Budget cut / IC rejection → return to Strategy &amp; Feasibility to re-model IRR or reduce scope</span>
+      </div>
+      <div class="loop-item">
+        <span class="loop-icon">⤵</span>
+        <span>Anchor tenant signs LOI → jumps from Recognition directly to Requirements (collapses Stage 2)</span>
+      </div>
+      <div class="loop-item">
+        <span class="loop-icon">↩</span>
+        <span>Contractor market unavailable / supply chain flag → return to Delivery Model (re-scope EPC vs. EPCM)</span>
+      </div>
+      <div class="loop-item">
+        <span class="loop-icon">↩</span>
+        <span>New CEO or leadership change → can restart journey from Stage 1 or 2 as mandate is re-evaluated</span>
+      </div>
+      <div class="loop-item">
+        <span class="loop-icon">⤵</span>
+        <span>PE exit pressure / fund deadline → accelerates from any stage directly to FID; compresses due diligence</span>
+      </div>
+      <div class="loop-item">
+        <span class="loop-icon">↩</span>
+        <span>Permitting rejected → return to Requirements; may require full site re-selection and OPR revision</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Buying group composition -->
+  <div class="buying-group">
+    <h3>Buying group composition by stage</h3>
+    <table class="bg-table">
+      <thead>
+        <tr>
+          <th>Role</th>
+          <th>Opportunity Recognition</th>
+          <th>Strategy &amp; Feasibility</th>
+          <th>Requirements &amp; Delivery Model</th>
+          <th>Partner &amp; Contractor Selection</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>CEO / Managing Director</strong></td>
+          <td>Leads — sets strategic intent</td>
+          <td>Leads — approves market position</td>
+          <td>Reviews delivery model choice</td>
+          <td>Signs off on preferred partner</td>
+        </tr>
+        <tr>
+          <td><strong>PE / Board / Investor</strong></td>
+          <td>Investment thesis sponsor</td>
+          <td>Approves business case &amp; IRR</td>
+          <td>Reviews milestone &amp; capital structure</td>
+          <td>Final IC approval — gates FID</td>
+        </tr>
+        <tr>
+          <td><strong>VP Construction / Development</strong></td>
+          <td>Absent (often not yet hired)</td>
+          <td>May be engaged as first hire</td>
+          <td><strong>Leads</strong> — owns OPR, delivery model</td>
+          <td><strong>Leads</strong> — runs RFP, evaluates bids</td>
+        </tr>
+        <tr>
+          <td><strong>CFO / Finance</strong></td>
+          <td>Supports PE thesis</td>
+          <td><strong>Leads</strong> financial model</td>
+          <td>Reviews contract structure &amp; risk</td>
+          <td>Reviews commercial terms</td>
+        </tr>
+        <tr>
+          <td><strong>Technical / Engineering Lead</strong></td>
+          <td>Absent or informal input</td>
+          <td>Site &amp; power assessment</td>
+          <td><strong>Leads</strong> — OPR &amp; BoD authorship</td>
+          <td>Technical evaluation of RFP responses</td>
+        </tr>
+        <tr>
+          <td><strong>External Advisory (Metier)</strong></td>
+          <td>—</td>
+          <td>Early-phase advisory engagement</td>
+          <td>Contract strategy, delivery model advisory</td>
+          <td>Owner's Engineer, PM support</td>
+        </tr>
+        <tr>
+          <td><strong>Lender's Technical Advisor</strong></td>
+          <td>—</td>
+          <td>—</td>
+          <td>Engaged for project finance DD</td>
+          <td>Reviews FID readiness package</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Operator archetypes -->
+  <div class="archetypes">
+    <h3>How different operator archetypes enter the journey</h3>
+    <div class="archetype-grid">
+
+      <div class="archetype-card">
+        <h4>Finance-First Developer ("Finansgutta")</h4>
+        <span class="entry">Entry: PE fund closes / thesis approved</span>
+        <p>Starts at Opportunity Recognition with capital ready but no execution team. Hires VP Construction mid-journey. Moves fast to FID but risks under-specifying requirements.</p>
+        <p class="pain">Pain: No PM capability, no procurement expertise, IC pressure on timeline</p>
+      </div>
+
+      <div class="archetype-card">
+        <h4>Utility / Energy-Backed Platform</h4>
+        <span class="entry">Entry: Power asset or grid capacity confirmed</span>
+        <p>Has the infrastructure advantage (land, power, grid connection). Jumps into feasibility quickly but lacks DC market knowledge. Strategy choice (segment, product) is the critical blocker.</p>
+        <p class="pain">Pain: Unclear market segment, DC-specific knowledge gaps, translating power into product</p>
+      </div>
+
+      <div class="archetype-card">
+        <h4>Domestic Operator Scaling (Bulk, Green Mountain)</h4>
+        <span class="entry">Entry: Customer demand signal / capacity constraint</span>
+        <p>Has operational credibility. Skips Opportunity Recognition — enters at Strategy / Requirements. Pain is delivery bandwidth: existing team is fully occupied running the operating site.</p>
+        <p class="pain">Pain: Design-to-build handover, cost/schedule control, procurement performance</p>
+      </div>
+
+      <div class="archetype-card">
+        <h4>Global Operator Entering Norway (Hyperscaler / Colo)</h4>
+        <span class="entry">Entry: Market analysis decision at HQ level</span>
+        <p>Has capital and delivery playbook but needs local expertise. Often enters at Requirements with a fixed design template that may conflict with Norwegian permitting, grid reality, and HSE rules.</p>
+        <p class="pain">Pain: Local permitting, Statnett grid queue, contractor market, community acceptance</p>
+      </div>
+
+      <div class="archetype-card">
+        <h4>Real-Estate / Industrial Park Developer Pivoting</h4>
+        <span class="entry">Entry: Site opportunity or customer enquiry</span>
+        <p>Has land, construction experience, and capital access but underestimates DC technical requirements. Often discovers the complexity late — in Requirements or even Contractor Selection.</p>
+        <p class="pain">Pain: DC-specific contracting, MEP interfaces, schedule risk, cost overruns</p>
+      </div>
+
+      <div class="archetype-card">
+        <h4>Regulated / Sovereign Operator (Gov, Defence, Finance)</h4>
+        <span class="entry">Entry: Mandate or compliance requirement</span>
+        <p>Journey is driven by a regulatory mandate or government directive. Buying group is large and slow-moving. Security clearance requirements constrain the contractor pool at Partner Selection.</p>
+        <p class="pain">Pain: Cleared contractor scarcity, security-by-design, governance documentation, change control</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Legend -->
+  <div class="legend">
+    <div class="legend-item">
+      <div class="swatch" style="background:#fff3e0; border-color:#ffa726;"></div>
+      Key trigger / entry event
+    </div>
+    <div class="legend-item">
+      <div class="swatch" style="background:#e3f2fd; border-color:#4fa0e0;"></div>
+      Primary Metier entry point
+    </div>
+    <div class="legend-item">
+      <div class="swatch" style="background:#fce4ec; border-color:#e8809a;"></div>
+      Common blocker / misalignment
+    </div>
+    <div class="legend-item">
+      <div class="swatch" style="background:#f1f8e9; border-color:#9fc96a;"></div>
+      Loop / feedback / delay event
+    </div>
+    <div class="legend-item">
+      <div class="swatch" style="background:#eef2fc; border-color:#b0bce8;"></div>
+      Research / discovery activity
+    </div>
+  </div>
+
+  <p class="source">
+    Source: Metier DC operator research 2024–2026 | Structure adapted from Gartner B2B Buying Journey framework (Gartner 2019) |
+    Operator archetypes: dc-customer-personas.md | Pain points: pain-point-service-mapping.md
+  </p>
+
+</div>
+</body>
+</html>
